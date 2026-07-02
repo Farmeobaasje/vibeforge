@@ -123,6 +123,44 @@ VibeForge ships with a **Guided Tour** featuring **BioBatch Sentinel** — a com
 
 ---
 
+## 🧱 Why I Built VibeForge
+
+VibeForge started from a very personal place.
+
+I worked in construction for years. It was the craft I knew, the work I was used to, and the world I came from.
+
+In 2019, I was involved in a serious car accident. Recovery took several years. From 2023 to 2026, I worked hard to return to construction and rebuild my life around physical work again.
+
+But over time, it became clear that my body could no longer keep up with that kind of work.
+
+During those years, programming became more than a hobby. It became a new craft.
+
+AI helped me learn faster, experiment more, and turn ideas into real software. But while building projects with AI coding assistants, I kept running into the same problem:
+
+Every project started with rebuilding the same context.
+
+The same planning.
+
+The same documentation.
+
+The same architecture decisions.
+
+The same prompts.
+
+The same project rules.
+
+So I built VibeForge.
+
+Not as another AI coding assistant, but as the workspace before the coding starts — a place where raw ideas become structured software blueprints that AI tools can actually work with.
+
+VibeForge represents a new chapter for me: building with software instead of construction materials, and sharing the tools I wish I had when I started.
+
+It is free and open source because I want other builders to use it, learn from it, and improve it.
+
+If VibeForge helps you start even one project with more clarity, then it has already done its job.
+
+---
+
 ## 🧩 Domain Templates
 
 VibeForge includes **17 domain-specific templates** that influence taglines, architecture patterns, entities, roadmaps, and data flows:
@@ -220,11 +258,24 @@ Distributed under the **MIT License**. See [LICENSE](./LICENSE) for more informa
 
 ## ☕ Support
 
-If you find VibeForge valuable, consider supporting the project:
+VibeForge is free and open source.
+
+There are no subscriptions, no locked features, and no enterprise edition.
+
+I build this project independently, in my own time, while transitioning into software development as a new career path.
+
+If VibeForge saves you time or helps you build better projects, you can support its development here:
 
 <a href="https://www.buymeacoffee.com/lynoa" target="_blank">
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;">
 </a>
+
+A coffee helps.  
+A kind message helps.  
+A GitHub star helps.  
+And if that coffee also helps with this week's groceries, I appreciate it more than you know.
+
+Thank you for supporting VibeForge. ❤️
 
 ---
 
