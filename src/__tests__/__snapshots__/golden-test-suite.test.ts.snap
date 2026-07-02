@@ -1,0 +1,3970 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Golden Test Suite — Bootstrap Prompt Generator > generates bootstrap prompt for CRM Pro > bootstrap-prompt-crm-pro 1`] = `
+"Repository state: existing-project
+
+### Decision tree — inspect before planning
+
+Inspect the repository before planning.
+
+1. **Existing code found**
+   → Continue implementation within the current structure.
+2. **Empty repository found**
+   → Initialize the scaffold described in the ProjectDefinition.
+3. **Repository structure differs from the ProjectDefinition**
+   → Explain the mismatch and ask for confirmation before continuing.
+
+# Cline Bootstrap — CRM Pro
+
+You are receiving a complete project definition. Read it carefully and then create an implementation plan and file-by-file plan. **Do not write any code yet.**
+
+### 📦 Existing project
+
+Continue implementing the existing repository. Do NOT recreate the scaffold. Work within the current project structure.
+
+## 1. Project Overview
+
+**Name:** CRM Pro
+**Tagline:** Simple CRM for small businesses
+**Version:** 0.2.0
+**Status:** ready
+
+**Description:**
+A lightweight customer relationship management tool designed specifically for small businesses that need contact management, deal tracking, and basic reporting.
+
+## 2. Goals and Scope
+
+**Problem:** Small businesses find enterprise CRMs too complex and expensive, while spreadsheets lack the structure needed for effective sales tracking.
+**Solution:** A simple, affordable CRM that provides contact management, deal pipeline tracking, and basic reporting without the enterprise overhead.
+**Target users:**
+- Small business owners
+- Freelancers
+- Sales representatives
+**User stories:**
+- As a sales rep, I want to track deals through a pipeline.
+- As a business owner, I want to see a dashboard with key metrics.
+**MVP features:**
+- Contact management with import/export
+- Deal pipeline with drag-and-drop
+- Dashboard with sales metrics
+- Basic reporting (monthly/quarterly)
+
+## 3. Technology Stack
+
+- **Frontend:** React
+- **Backend:** FastAPI
+- **Database:** PostgreSQL, Redis
+- **Other:** TypeScript, Python
+**Constraints:**
+- GDPR compliant data handling
+- Multi-tenant architecture
+
+## 4. Architecture
+
+**Pattern:** Microservices with REST API gateway
+**Component tree:**
+\`\`\`
+App
+├── DashboardPage
+├── ContactListPage
+├── DealPipelinePage
+├── ActivityTimelinePage
+├── ReportPage
+├── SettingsPage
+├── ImportExportPage
+├── EmailIntegrationPage
+├── ContactManagementWithImportexport
+├── DealPipelineWithDraganddrop
+├── DashboardWithSalesMetrics
+├── BasicReportingMonthlyquarterly
+\`\`\`
+**Data flow:**
+\`\`\`
+User adds contact → contact appears in pipeline → user moves deal through stages → dashboard updates metrics → reports generated from pipeline data
+\`\`\`
+
+## 4b. Domain Model
+
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+
+## 5. Roadmap
+
+### Foundation & Setup
+- [x] Project scaffold opzetten
+
+### MVP — Core Features
+- [x] Contact management
+
+### Advanced Features ← CURRENT
+- [ ] Email integration
+
+## 6. Memory Bank Instructions
+
+Cline uses a Memory Bank to maintain context between sessions. The following files must be created and maintained:
+
+- \`memory-bank/projectbrief.md\` — Core requirements and goals (required)
+- \`memory-bank/productContext.md\` — Why this exists and how it should work (required)
+- \`memory-bank/activeContext.md\` — Current focus and recent changes (required)
+- \`memory-bank/systemPatterns.md\` — Architecture and technical decisions (required)
+- \`memory-bank/techContext.md\` — Technologies and setup (required)
+- \`memory-bank/progress.md\` — What works and what's left (required)
+
+**Update cadence:** After every session and at milestones
+
+## 7. Work Instructions for Cline
+
+You work in two modes: **Plan** and **Act**. Follow these steps:
+
+### Plan mode
+
+1. Read the full bootstrap prompt and the ProjectDefinition above.
+2. Analyze the roadmap and determine which phase and task should be tackled first.
+3. Create an **implementation plan** with a clear order of steps.
+4. Create a **file-by-file plan** with per-file: path, content description, and any dependencies.
+5. Present the plan to the user and wait for approval.
+
+### Act mode
+
+1. After plan approval, write the exact files as specified.
+2. Adhere to the architecture, technology stack, and quality rules from the project definition.
+3. Follow the roadmap: mark completed tasks as \`done\` and update the Memory Bank.
+4. After each session: update \`activeContext.md\` and \`progress.md\` with progress.
+
+## 8. Quality Rules
+
+**Code style:** TypeScript strict mode, Python type hints
+**Testing strategy:** Unit tests + integration tests
+**Validation rules:**
+- Contact data must be exportable
+- Deal pipeline must support custom stages
+**Fallback behavior:** Empty sections render a helpful hint instead of crashing
+
+## 9. Agent Configuration
+
+- **orchestrator** (gpt-4o): Convert raw project ideas into a structured ProjectDefinition JSON.
+- **plan** (claude-sonnet-4-20250514): Read the bootstrap prompt and present a file-by-file implementation plan.
+- **act** (claude-sonnet-4-20250514): Write the exact files specified in the plan.
+
+---
+
+**Assignment:** Create an implementation plan and a file-by-file plan based on the above project definition. Do not write any code yet. Wait for approval before creating files.
+
+**Before proposing new files:**
+1. Inspect the existing repository.
+2. Reuse existing components whenever possible.
+3. Modify existing files instead of creating duplicates.
+4. Only introduce new files when no suitable location exists."
+`;
+
+exports[`Golden Test Suite — Bootstrap Prompt Generator > generates bootstrap prompt for FitFlow Studio > bootstrap-prompt-fitflow-studio 1`] = `
+"Repository state: greenfield
+
+### Decision tree — inspect before planning
+
+Inspect the repository before planning.
+
+1. **Existing code found**
+   → Continue implementation within the current structure.
+2. **Empty repository found**
+   → Initialize the scaffold described in the ProjectDefinition.
+3. **Repository structure differs from the ProjectDefinition**
+   → Explain the mismatch and ask for confirmation before continuing.
+
+# Cline Bootstrap — FitFlow Studio
+
+You are receiving a complete project definition. Read it carefully and then create an implementation plan and file-by-file plan. **Do not write any code yet.**
+
+### 🆕 Greenfield project
+
+Create a brand new project from scratch. Initialize the scaffold, install dependencies, and set up the full project structure before implementing any features.
+
+## 1. Project Overview
+
+**Name:** FitFlow Studio
+**Tagline:** AI-powered personal training app
+**Version:** 0.1.0
+**Status:** idea
+
+**Description:**
+A mobile-first web app that generates personalized workout plans using AI, tracks progress, and adapts routines based on user feedback.
+
+## 2. Goals and Scope
+
+**Problem:** Generic workout apps don't adapt to individual progress and preferences, leading to plateaus and loss of motivation.
+**Solution:** An AI-powered fitness app that creates dynamic workout plans that evolve with the user's progress, preferences, and feedback.
+**Target users:**
+- Personal trainers
+- Fitness enthusiasts
+- People starting their fitness journey
+**User stories:**
+- As a user, I want to get a personalized workout plan based on my goals and equipment.
+- As a user, I want to log my workouts and see progress over time.
+**MVP features:**
+- User onboarding with fitness assessment
+- AI-generated workout plan
+- Workout logging and tracking
+- Progress dashboard with charts
+
+## 3. Technology Stack
+
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript, JavaScript
+**Constraints:**
+- Mobile-first responsive design
+- Offline support for workout tracking
+
+## 4. Architecture
+
+**Pattern:** Progressive Web App with service worker caching
+**Component tree:**
+\`\`\`
+App
+├── HomePage
+├── WorkoutPlannerPage
+├── ProgressDashboard
+├── ExerciseLibrary
+├── UserProfilePage
+├── SubscriptionPage
+├── SocialFeedPage
+├── UserOnboardingWithFitnessAssessment
+├── AIgeneratedWorkoutPlan
+├── WorkoutLoggingAndTracking
+├── ProgressDashboardWithCharts
+\`\`\`
+**Data flow:**
+\`\`\`
+User creates profile → selects fitness goals → AI generates workout plan → user logs exercises → progress tracked and visualised → plan adapts based on feedback
+\`\`\`
+
+## 4b. Domain Model
+
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+
+## 5. Roadmap
+
+### Foundation & Setup ← CURRENT
+- [ ] Project scaffold opzetten
+
+### MVP — Core Features
+- [ ] Workout plan generator
+
+## 6. Memory Bank Instructions
+
+Cline uses a Memory Bank to maintain context between sessions. The following files must be created and maintained:
+
+- \`memory-bank/projectbrief.md\` — Core requirements and goals (required)
+- \`memory-bank/productContext.md\` — Why this exists and how it should work (required)
+- \`memory-bank/activeContext.md\` — Current focus and recent changes (required)
+- \`memory-bank/systemPatterns.md\` — Architecture and technical decisions (required)
+- \`memory-bank/techContext.md\` — Technologies and setup (required)
+- \`memory-bank/progress.md\` — What works and what's left (required)
+
+**Update cadence:** After every session and at milestones
+
+## 7. Work Instructions for Cline
+
+You work in two modes: **Plan** and **Act**. Follow these steps:
+
+### Plan mode
+
+1. Read the full bootstrap prompt and the ProjectDefinition above.
+2. Analyze the roadmap and determine which phase and task should be tackled first.
+3. Create an **implementation plan** with a clear order of steps.
+4. Create a **file-by-file plan** with per-file: path, content description, and any dependencies.
+5. Present the plan to the user and wait for approval.
+
+### Act mode
+
+1. After plan approval, write the exact files as specified.
+2. Adhere to the architecture, technology stack, and quality rules from the project definition.
+3. Follow the roadmap: mark completed tasks as \`done\` and update the Memory Bank.
+4. After each session: update \`activeContext.md\` and \`progress.md\` with progress.
+
+## 8. Quality Rules
+
+**Code style:** TypeScript strict mode, functional components, Tailwind classes
+**Testing strategy:** Manual review in MVP; vitest planned
+**Validation rules:**
+- Workout plans must be valid and safe
+- Progress data must be stored locally
+**Fallback behavior:** Empty sections render a helpful hint instead of crashing
+
+## 9. Agent Configuration
+
+- **orchestrator** (gpt-4o): Convert raw project ideas into a structured ProjectDefinition JSON.
+- **plan** (claude-sonnet-4-20250514): Read the bootstrap prompt and present a file-by-file implementation plan.
+- **act** (claude-sonnet-4-20250514): Write the exact files specified in the plan.
+
+---
+
+**Assignment:** Now create an implementation plan and a file-by-file plan based on the above project definition. Do not write any code yet. Wait for approval before creating files."
+`;
+
+exports[`Golden Test Suite — Bootstrap Prompt Generator > generates bootstrap prompt for PawPilot > bootstrap-prompt-pawpilot 1`] = `
+"Repository state: greenfield
+
+### Decision tree — inspect before planning
+
+Inspect the repository before planning.
+
+1. **Existing code found**
+   → Continue implementation within the current structure.
+2. **Empty repository found**
+   → Initialize the scaffold described in the ProjectDefinition.
+3. **Repository structure differs from the ProjectDefinition**
+   → Explain the mismatch and ask for confirmation before continuing.
+
+# Cline Bootstrap — PawPilot
+
+You are receiving a complete project definition. Read it carefully and then create an implementation plan and file-by-file plan. **Do not write any code yet.**
+
+### 🆕 Greenfield project
+
+Create a brand new project from scratch. Initialize the scaffold, install dependencies, and set up the full project structure before implementing any features.
+
+## 1. Project Overview
+
+**Name:** PawPilot
+**Tagline:** Pet care platform for pet owners and veterinarians
+**Version:** 0.1.0
+**Status:** idea
+
+**Description:**
+A comprehensive pet care platform that connects pet owners with veterinarians. Features include appointment scheduling, pet health profiles, medical record management, medication tracking, and direct communication with vets.
+
+## 2. Goals and Scope
+
+**Problem:** Pet owners struggle to keep track of their pets' health records, appointments, and medications across multiple vet visits and providers.
+**Solution:** A unified platform that centralizes pet health management with appointment scheduling, digital health records, medication reminders, and direct vet communication.
+**Target users:**
+- Pet owners
+- Veterinarians
+- Pet care providers
+**User stories:**
+- As a pet owner, I want to store my pet's health records in one place.
+- As a veterinarian, I want to access a pet's medical history before an appointment.
+**MVP features:**
+- Pet profile creation with health records
+- Appointment scheduling with calendar view
+- Medication tracking with reminders
+- Vet communication via in-app messaging
+
+## 3. Technology Stack
+
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript
+**Constraints:**
+- Mobile-first responsive design
+- HIPAA/GDPR compliant data handling
+
+## 4. Architecture
+
+**Pattern:** Client-server with REST API, search index, and payment gateway
+**Component tree:**
+\`\`\`
+App
+├── HomePage
+├── ProductListingPage
+├── ProductDetailPage
+├── SearchResultsPage
+├── SellerDashboardPage
+├── CartPage
+├── CheckoutPage
+├── UserProfilePage
+├── AdminDashboardPage
+├── PetProfileCreationWithHealthRecords
+├── AppointmentSchedulingWithCalendarView
+├── MedicationTrackingWithReminders
+├── VetCommunicationViaInappMessaging
+\`\`\`
+**Data flow:**
+\`\`\`
+Seller lists product → product indexed in search → buyer browses/search → buyer views detail → buyer adds to cart → checkout processes payment → order created → seller notified → tracking updated
+\`\`\`
+
+## 4b. Domain Model
+
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+
+## 5. Roadmap
+
+### Foundation & Setup ← CURRENT
+- [ ] Initialize project with chosen tech stack
+- [ ] Set up authentication and user profiles
+- [ ] Configure database schema for products, users, orders
+
+### Core Marketplace Features
+- [ ] Build product listing and management
+- [ ] Implement search with filters and categories
+- [ ] Create product detail pages with images
+
+### Buyer & Seller Workflows
+- [ ] Build shopping cart and checkout flow
+- [ ] Implement seller dashboard and analytics
+- [ ] Add order management and tracking
+
+### Advanced Features & Launch
+- [ ] Add payment gateway integration
+- [ ] Implement reviews and ratings
+- [ ] Add monitoring, testing, and production deployment
+
+## 6. Memory Bank Instructions
+
+Cline uses a Memory Bank to maintain context between sessions. The following files must be created and maintained:
+
+- \`memory-bank/projectbrief.md\` — Core requirements and goals (required)
+- \`memory-bank/productContext.md\` — Why this exists and how it should work (required)
+- \`memory-bank/activeContext.md\` — Current focus and recent changes (required)
+- \`memory-bank/systemPatterns.md\` — Architecture and technical decisions (required)
+- \`memory-bank/techContext.md\` — Technologies and setup (required)
+- \`memory-bank/progress.md\` — What works and what's left (required)
+
+**Update cadence:** After every session and at milestones
+
+## 7. Work Instructions for Cline
+
+You work in two modes: **Plan** and **Act**. Follow these steps:
+
+### Plan mode
+
+1. Read the full bootstrap prompt and the ProjectDefinition above.
+2. Analyze the roadmap and determine which phase and task should be tackled first.
+3. Create an **implementation plan** with a clear order of steps.
+4. Create a **file-by-file plan** with per-file: path, content description, and any dependencies.
+5. Present the plan to the user and wait for approval.
+
+### Act mode
+
+1. After plan approval, write the exact files as specified.
+2. Adhere to the architecture, technology stack, and quality rules from the project definition.
+3. Follow the roadmap: mark completed tasks as \`done\` and update the Memory Bank.
+4. After each session: update \`activeContext.md\` and \`progress.md\` with progress.
+
+## 8. Quality Rules
+
+**Code style:** TypeScript strict mode, functional components, Tailwind classes
+**Testing strategy:** Manual review in MVP; vitest planned
+**Validation rules:**
+- Pet health data must be stored securely
+- Appointment scheduling must prevent double-booking
+**Fallback behavior:** Empty sections render a helpful hint instead of crashing
+
+## 9. Agent Configuration
+
+- **orchestrator** (gpt-4o): Convert raw project ideas into a structured ProjectDefinition JSON.
+- **plan** (claude-sonnet-4-20250514): Read the bootstrap prompt and present a file-by-file implementation plan.
+- **act** (claude-sonnet-4-20250514): Write the exact files specified in the plan.
+
+---
+
+**Assignment:** Now create an implementation plan and a file-by-file plan based on the above project definition. Do not write any code yet. Wait for approval before creating files."
+`;
+
+exports[`Golden Test Suite — Bootstrap Prompt Generator > generates bootstrap prompt for RestaurantFlow > bootstrap-prompt-restaurantflow 1`] = `
+"Repository state: existing-project
+
+### Decision tree — inspect before planning
+
+Inspect the repository before planning.
+
+1. **Existing code found**
+   → Continue implementation within the current structure.
+2. **Empty repository found**
+   → Initialize the scaffold described in the ProjectDefinition.
+3. **Repository structure differs from the ProjectDefinition**
+   → Explain the mismatch and ask for confirmation before continuing.
+
+# Cline Bootstrap — RestaurantFlow
+
+You are receiving a complete project definition. Read it carefully and then create an implementation plan and file-by-file plan. **Do not write any code yet.**
+
+### 📦 Existing project
+
+Continue implementing the existing repository. Do NOT recreate the scaffold. Work within the current project structure.
+
+## 1. Project Overview
+
+**Name:** RestaurantFlow
+**Tagline:** Digital restaurant management system
+**Version:** 0.1.0
+**Status:** draft
+
+**Description:**
+A comprehensive system for restaurants to manage reservations, table assignments, menu updates, and order tracking in real-time.
+
+## 2. Goals and Scope
+
+**Problem:** Restaurants struggle with coordinating reservations, table assignments, and orders using paper-based or disconnected digital tools.
+**Solution:** A unified digital platform that streamlines reservation management, table assignment, and order tracking with real-time updates.
+**Target users:**
+- Restaurant owners
+- Restaurant managers
+- Waitstaff
+**User stories:**
+- As a host, I want to manage reservations and assign tables visually.
+- As a waiter, I want to send orders to the kitchen digitally.
+**MVP features:**
+- Reservation calendar with table management
+- Digital order taking and kitchen display
+- Menu management with categories
+- Real-time table status overview
+
+## 3. Technology Stack
+
+- **Frontend:** React
+- **Backend:** Node.js, Express
+- **Database:** PostgreSQL
+- **Other:** TypeScript, SQL
+**Constraints:**
+- Real-time sync required
+- Multi-device support (tablet, kiosk, kitchen display)
+
+## 4. Architecture
+
+**Pattern:** Client-server architecture with WebSocket real-time updates
+**Component tree:**
+\`\`\`
+App
+├── DashboardPage
+├── ReservationCalendarPage
+├── OrderManagementPage
+├── MenuManagementPage
+├── KitchenDisplayPage
+├── TableManagementPage
+├── CustomerProfilePage
+├── ReportPage
+├── ReservationCalendarWithTableManagement
+├── DigitalOrderTakingAndKitchenDisplay
+├── MenuManagementWithCategories
+├── RealtimeTableStatusOverview
+\`\`\`
+**Data flow:**
+\`\`\`
+Customer makes reservation → host assigns table → waiter takes order → order sent to kitchen display → kitchen prepares and marks complete → waiter serves → payment processed → table freed
+\`\`\`
+
+## 4b. Domain Model
+
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+
+## 5. Roadmap
+
+### Foundation & Setup
+- [x] Database schema ontwerpen
+
+### MVP — Core Features ← CURRENT
+- [ ] Reservation system
+
+## 6. Memory Bank Instructions
+
+Cline uses a Memory Bank to maintain context between sessions. The following files must be created and maintained:
+
+- \`memory-bank/projectbrief.md\` — Core requirements and goals (required)
+- \`memory-bank/productContext.md\` — Why this exists and how it should work (required)
+- \`memory-bank/activeContext.md\` — Current focus and recent changes (required)
+- \`memory-bank/systemPatterns.md\` — Architecture and technical decisions (required)
+- \`memory-bank/techContext.md\` — Technologies and setup (required)
+- \`memory-bank/progress.md\` — What works and what's left (required)
+
+**Update cadence:** After every session and at milestones
+
+## 7. Work Instructions for Cline
+
+You work in two modes: **Plan** and **Act**. Follow these steps:
+
+### Plan mode
+
+1. Read the full bootstrap prompt and the ProjectDefinition above.
+2. Analyze the roadmap and determine which phase and task should be tackled first.
+3. Create an **implementation plan** with a clear order of steps.
+4. Create a **file-by-file plan** with per-file: path, content description, and any dependencies.
+5. Present the plan to the user and wait for approval.
+
+### Act mode
+
+1. After plan approval, write the exact files as specified.
+2. Adhere to the architecture, technology stack, and quality rules from the project definition.
+3. Follow the roadmap: mark completed tasks as \`done\` and update the Memory Bank.
+4. After each session: update \`activeContext.md\` and \`progress.md\` with progress.
+
+## 8. Quality Rules
+
+**Code style:** TypeScript strict mode, functional components
+**Testing strategy:** Integration tests for API endpoints
+**Validation rules:**
+- Reservations must not double-book tables
+- Orders must reach kitchen within 2 seconds
+**Fallback behavior:** Empty sections render a helpful hint instead of crashing
+
+## 9. Agent Configuration
+
+- **orchestrator** (gpt-4o): Convert raw project ideas into a structured ProjectDefinition JSON.
+- **plan** (claude-sonnet-4-20250514): Read the bootstrap prompt and present a file-by-file implementation plan.
+- **act** (claude-sonnet-4-20250514): Write the exact files specified in the plan.
+
+---
+
+**Assignment:** Create an implementation plan and a file-by-file plan based on the above project definition. Do not write any code yet. Wait for approval before creating files.
+
+**Before proposing new files:**
+1. Inspect the existing repository.
+2. Reuse existing components whenever possible.
+3. Modify existing files instead of creating duplicates.
+4. Only introduce new files when no suitable location exists."
+`;
+
+exports[`Golden Test Suite — Bootstrap Prompt Generator > generates bootstrap prompt for RetroForge > bootstrap-prompt-retroforge 1`] = `
+"Repository state: greenfield
+
+### Decision tree — inspect before planning
+
+Inspect the repository before planning.
+
+1. **Existing code found**
+   → Continue implementation within the current structure.
+2. **Empty repository found**
+   → Initialize the scaffold described in the ProjectDefinition.
+3. **Repository structure differs from the ProjectDefinition**
+   → Explain the mismatch and ask for confirmation before continuing.
+
+# Cline Bootstrap — RetroForge
+
+You are receiving a complete project definition. Read it carefully and then create an implementation plan and file-by-file plan. **Do not write any code yet.**
+
+### 🆕 Greenfield project
+
+Create a brand new project from scratch. Initialize the scaffold, install dependencies, and set up the full project structure before implementing any features.
+
+## 1. Project Overview
+
+**Name:** RetroForge
+**Tagline:** Web-based retro game emulator for classic console experiences
+**Version:** 0.1.0
+**Status:** idea
+
+**Description:**
+A browser-based retro game emulator that supports NES, SNES, and Game Boy platforms. Features include ROM loading, save state management, controller configuration, and cheat code support. Built with WebAssembly for high-performance emulation.
+
+## 2. Goals and Scope
+
+**Problem:** Retro gaming enthusiasts struggle to find modern, cross-platform emulators that work seamlessly in the browser without complex setup or dedicated hardware.
+**Solution:** A web-based emulator platform that brings classic console gaming to any modern browser with save states, controller support, and a clean library management interface.
+**Target users:**
+- Retro gaming enthusiasts
+- Emulator developers
+- Game preservationists
+**User stories:**
+- As a retro gamer, I want to load ROMs and play classic games in my browser.
+- As a gamer, I want to save and load my progress at any point.
+- As a power user, I want to configure controller mappings for different platforms.
+**MVP features:**
+- ROM loading and parsing for NES/SNES/Game Boy
+- Emulation core with CPU, GPU, and audio
+- Save state creation and loading
+- Controller configuration UI
+- ROM library with grid view
+
+## 3. Technology Stack
+
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript, C++, WebAssembly, Emscripten, SDL2, OpenGL, IndexedDB
+**Constraints:**
+- WebAssembly-based emulation core
+- IndexedDB for ROM and save state storage
+- Offline-capable after initial load
+
+## 4. Architecture
+
+**Pattern:** Desktop application with plugin-based emulator cores and local file storage
+**Component tree:**
+\`\`\`
+App
+├── HomePage
+├── GameLibraryPage
+├── EmulatorCorePage
+├── RomManagerPage
+├── SaveStatePage
+├── ControllerConfigPage
+├── SettingsPage
+├── ROMLoadingAndParsingForNESSNESGameBoy
+├── EmulationCoreWithCPUGPUAndAudio
+├── SaveStateCreationAndLoading
+├── ControllerConfigurationUI
+├── ROMLibraryWithGridView
+\`\`\`
+**Data flow:**
+\`\`\`
+User launches app → browses game library → selects ROM → emulator core loads → game renders with audio/video → user plays with mapped controls → save state created → progress persisted
+\`\`\`
+
+## 4b. Domain Model
+
+### Entities
+- **ROM**: Game ROM file for emulation
+- **SaveState**: Saved game state snapshot
+- **Game**: Retro game instance
+- **ControllerConfig**: Controller mapping configuration
+- **EmulatorCore**: Emulation core engine
+
+## 5. Roadmap
+
+### Foundation & Setup ← CURRENT
+- [ ] Initialize project with chosen tech stack
+- [ ] Set up emulator core integration
+- [ ] Configure ROM loading and file management
+
+### Core Emulation Features
+- [ ] Build game library with metadata scraping
+- [ ] Implement emulator core with save states
+- [ ] Add controller mapping and input handling
+
+### User Experience
+- [ ] Build save state management UI
+- [ ] Implement cheat code support
+- [ ] Add display filters and scaling options
+
+### Advanced Features & Launch
+- [ ] Add multiplayer/netplay support
+- [ ] Implement achievement system
+- [ ] Add monitoring, testing, and production deployment
+
+## 6. Memory Bank Instructions
+
+Cline uses a Memory Bank to maintain context between sessions. The following files must be created and maintained:
+
+- \`memory-bank/projectbrief.md\` — Core requirements and goals (required)
+- \`memory-bank/productContext.md\` — Why this exists and how it should work (required)
+- \`memory-bank/activeContext.md\` — Current focus and recent changes (required)
+- \`memory-bank/systemPatterns.md\` — Architecture and technical decisions (required)
+- \`memory-bank/techContext.md\` — Technologies and setup (required)
+- \`memory-bank/progress.md\` — What works and what's left (required)
+
+**Update cadence:** After every session and at milestones
+
+## 7. Work Instructions for Cline
+
+You work in two modes: **Plan** and **Act**. Follow these steps:
+
+### Plan mode
+
+1. Read the full bootstrap prompt and the ProjectDefinition above.
+2. Analyze the roadmap and determine which phase and task should be tackled first.
+3. Create an **implementation plan** with a clear order of steps.
+4. Create a **file-by-file plan** with per-file: path, content description, and any dependencies.
+5. Present the plan to the user and wait for approval.
+
+### Act mode
+
+1. After plan approval, write the exact files as specified.
+2. Adhere to the architecture, technology stack, and quality rules from the project definition.
+3. Follow the roadmap: mark completed tasks as \`done\` and update the Memory Bank.
+4. After each session: update \`activeContext.md\` and \`progress.md\` with progress.
+
+## 8. Quality Rules
+
+**Code style:** TypeScript strict mode, C++ with modern standards
+**Testing strategy:** Unit tests for emulation core; integration tests for UI
+**Validation rules:**
+- ROM files must be validated before loading
+- Save states must be portable across sessions
+**Fallback behavior:** Empty sections render a helpful hint instead of crashing
+
+## 9. Agent Configuration
+
+- **orchestrator** (gpt-4o): Convert raw project ideas into a structured ProjectDefinition JSON.
+- **plan** (claude-sonnet-4-20250514): Read the bootstrap prompt and present a file-by-file implementation plan.
+- **act** (claude-sonnet-4-20250514): Write the exact files specified in the plan.
+
+---
+
+**Assignment:** Now create an implementation plan and a file-by-file plan based on the above project definition. Do not write any code yet. Wait for approval before creating files."
+`;
+
+exports[`Golden Test Suite — Bootstrap Prompt Generator > generates bootstrap prompt for SolarPro Lokaal > bootstrap-prompt-solarpro-lokaal 1`] = `
+"Repository state: greenfield
+
+### Decision tree — inspect before planning
+
+Inspect the repository before planning.
+
+1. **Existing code found**
+   → Continue implementation within the current structure.
+2. **Empty repository found**
+   → Initialize the scaffold described in the ProjectDefinition.
+3. **Repository structure differs from the ProjectDefinition**
+   → Explain the mismatch and ask for confirmation before continuing.
+
+# Cline Bootstrap — SolarPro Lokaal
+
+You are receiving a complete project definition. Read it carefully and then create an implementation plan and file-by-file plan. **Do not write any code yet.**
+
+### 🆕 Greenfield project
+
+Create a brand new project from scratch. Initialize the scaffold, install dependencies, and set up the full project structure before implementing any features.
+
+## 1. Project Overview
+
+**Name:** SolarPro Lokaal
+**Tagline:** Lokaal offerteplatform voor zonnepaneleninstallateurs
+**Version:** 0.1.0
+**Status:** draft
+
+**Description:**
+Een platform waar lokale zonnepaneleninstallateurs offertes kunnen maken, beheren en versturen naar klanten. Het platform biedt een professionele uitstraling met een eenvoudige workflow.
+
+## 2. Goals and Scope
+
+**Problem:** Lokale zonnepaneleninstallateurs hebben geen professioneel offerteplatform, waardoor ze tijd verliezen met handmatige offertes en een minder professionele uitstraling hebben.
+**Solution:** Een gebruiksvriendelijk webplatform waar installateurs snel offertes kunnen genereren, beheren en versturen, met een professionele template en klantbeheer.
+**Target users:**
+- Zonnepaneleninstallateurs
+- MKB-bedrijven in de zonne-energie
+**User stories:**
+- Als installateur wil ik een offerte kunnen maken op basis van een template, zodat ik tijd bespaar.
+- Als installateur wil ik klantgegevens kunnen opslaan, zodat ik ze niet elke keer opnieuw hoef in te voeren.
+**MVP features:**
+- Offerte maken met template
+- Klantbeheer met adresgegevens
+- Offerte exporteren als PDF
+- Offerte status bijhouden (concept/verzonden/goedgekeurd)
+
+## 3. Technology Stack
+
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript, HTML, CSS
+**Constraints:**
+- Lokaal draaiend zonder backend
+- Offertes moeten offline beschikbaar zijn
+
+## 4. Architecture
+
+**Pattern:** Single-page application met client-side routing
+**Component tree:**
+\`\`\`
+App
+├── DashboardPage
+├── ContactListPage
+├── DealPipelinePage
+├── ActivityTimelinePage
+├── ReportPage
+├── SettingsPage
+├── ImportExportPage
+├── EmailIntegrationPage
+├── OfferteMakenMetTemplate
+├── KlantbeheerMetAdresgegevens
+├── OfferteExporterenAlsPDF
+├── OfferteStatusBijhoudenConceptverzondengoedgekeurd
+\`\`\`
+**Data flow:**
+\`\`\`
+User adds contact → contact appears in pipeline → user moves deal through stages → dashboard updates metrics → reports generated from pipeline data
+\`\`\`
+
+## 4b. Domain Model
+
+### Entities
+- **Panel**: Solar panel product
+- **Installation**: Solar panel installation project
+- **Quote**: Customer quote for solar installation
+- **Customer**: Customer requesting a quote
+
+## 5. Roadmap
+
+### Foundation & Setup ← CURRENT
+- [ ] Project scaffold opzetten
+
+### MVP — Kernfunctionaliteit
+- [ ] Offerte template bouwen
+
+## 6. Memory Bank Instructions
+
+Cline uses a Memory Bank to maintain context between sessions. The following files must be created and maintained:
+
+- \`memory-bank/projectbrief.md\` — Core requirements and goals (required)
+- \`memory-bank/productContext.md\` — Why this exists and how it should work (required)
+- \`memory-bank/activeContext.md\` — Current focus and recent changes (required)
+- \`memory-bank/systemPatterns.md\` — Architecture and technical decisions (required)
+- \`memory-bank/techContext.md\` — Technologies and setup (required)
+- \`memory-bank/progress.md\` — What works and what's left (required)
+
+**Update cadence:** After every session and at milestones
+
+## 7. Work Instructions for Cline
+
+You work in two modes: **Plan** and **Act**. Follow these steps:
+
+### Plan mode
+
+1. Read the full bootstrap prompt and the ProjectDefinition above.
+2. Analyze the roadmap and determine which phase and task should be tackled first.
+3. Create an **implementation plan** with a clear order of steps.
+4. Create a **file-by-file plan** with per-file: path, content description, and any dependencies.
+5. Present the plan to the user and wait for approval.
+
+### Act mode
+
+1. After plan approval, write the exact files as specified.
+2. Adhere to the architecture, technology stack, and quality rules from the project definition.
+3. Follow the roadmap: mark completed tasks as \`done\` and update the Memory Bank.
+4. After each session: update \`activeContext.md\` and \`progress.md\` with progress.
+
+## 8. Quality Rules
+
+**Code style:** TypeScript strict mode, functional components, Tailwind classes
+**Testing strategy:** Manual review in MVP
+**Validation rules:**
+- Offerte template moet valide PDF opleveren
+- Klantgegevens moeten lokaal worden opgeslagen
+**Fallback behavior:** Empty sections render a helpful hint instead of crashing
+
+## 9. Agent Configuration
+
+- **orchestrator** (gpt-4o): Convert raw project ideas into a structured ProjectDefinition JSON.
+- **plan** (claude-sonnet-4-20250514): Read the bootstrap prompt and present a file-by-file implementation plan.
+- **act** (claude-sonnet-4-20250514): Write the exact files specified in the plan.
+
+---
+
+**Assignment:** Now create an implementation plan and a file-by-file plan based on the above project definition. Do not write any code yet. Wait for approval before creating files."
+`;
+
+exports[`Golden Test Suite — Bootstrap Prompt Generator > generates bootstrap prompt for TaskForge > bootstrap-prompt-taskforge 1`] = `
+"Repository state: greenfield
+
+### Decision tree — inspect before planning
+
+Inspect the repository before planning.
+
+1. **Existing code found**
+   → Continue implementation within the current structure.
+2. **Empty repository found**
+   → Initialize the scaffold described in the ProjectDefinition.
+3. **Repository structure differs from the ProjectDefinition**
+   → Explain the mismatch and ask for confirmation before continuing.
+
+# Cline Bootstrap — New Software Project
+
+You are receiving a complete project definition. Read it carefully and then create an implementation plan and file-by-file plan. **Do not write any code yet.**
+
+### 🆕 Greenfield project
+
+Create a brand new project from scratch. Initialize the scaffold, install dependencies, and set up the full project structure before implementing any features.
+
+## 1. Project Overview
+
+**Name:** New Software Project
+**Tagline:** AI-ready software project
+**Version:** 0.1.0
+**Status:** draft
+
+**Description:**
+I want to build a tool that helps developers track their tasks across multiple projects. The tool should integrate with GitHub and Jira and provide a unified dashboard.
+
+## 2. Goals and Scope
+
+**Problem:** Developers work across multiple projects and tools, making it hard to track what they're working on.
+**Solution:** A unified task tracking dashboard that aggregates tasks from GitHub and Jira into a single view.
+**Target users:**
+- Developers
+- Tech leads
+- Developers
+- Project managers
+**User stories:**
+- As a developer, I want to see all my tasks from GitHub and Jira in one dashboard.
+- As a tech lead, I want to see my team's workload across projects.
+**MVP features:**
+- GitHub issue integration
+- Jira ticket integration
+- Unified task dashboard
+- Team workload view
+
+## 3. Technology Stack
+
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript
+**Constraints:**
+- Local-first with optional cloud sync
+- OAuth for GitHub and Jira
+
+## 4. Architecture
+
+**Pattern:** Client-server with real-time updates, drag-and-drop boards, and role-based access
+**Component tree:**
+\`\`\`
+App
+├── DashboardPage
+├── BoardViewPage
+├── TaskDetailPage
+├── TimelinePage
+├── TeamPage
+├── ReportPage
+├── SettingsPage
+├── GitHubIssueIntegration
+├── JiraTicketIntegration
+├── UnifiedTaskDashboard
+├── TeamWorkloadView
+\`\`\`
+**Data flow:**
+\`\`\`
+Project manager creates project → defines tasks and milestones → team members assigned → work tracked on board → progress updated → reports generated → project completed
+\`\`\`
+
+## 4b. Domain Model
+
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+
+## 5. Roadmap
+
+### Foundation & Setup ← CURRENT
+- [ ] Initialize project with chosen tech stack
+- [ ] Set up database schema for projects, tasks, and teams
+- [ ] Configure authentication and role-based access
+
+### Core Project Features
+- [ ] Build project creation and management
+- [ ] Implement task board with drag-and-drop
+- [ ] Add task detail view with comments
+
+### Team & Collaboration
+- [ ] Build team management and permissions
+- [ ] Implement real-time collaboration
+- [ ] Add notifications and activity feed
+
+### Advanced Features & Launch
+- [ ] Add timeline and Gantt chart view
+- [ ] Implement reporting and export
+- [ ] Add monitoring, testing, and production deployment
+
+## 6. Memory Bank Instructions
+
+Cline uses a Memory Bank to maintain context between sessions. The following files must be created and maintained:
+
+- \`memory-bank/projectbrief.md\` — Core requirements and goals (required)
+- \`memory-bank/productContext.md\` — Why this exists and how it should work (required)
+- \`memory-bank/activeContext.md\` — Current focus and recent changes (required)
+- \`memory-bank/systemPatterns.md\` — Architecture and technical decisions (required)
+- \`memory-bank/techContext.md\` — Technologies and setup (required)
+- \`memory-bank/progress.md\` — What works and what's left (required)
+
+**Update cadence:** After every session and at milestones
+
+## 7. Work Instructions for Cline
+
+You work in two modes: **Plan** and **Act**. Follow these steps:
+
+### Plan mode
+
+1. Read the full bootstrap prompt and the ProjectDefinition above.
+2. Analyze the roadmap and determine which phase and task should be tackled first.
+3. Create an **implementation plan** with a clear order of steps.
+4. Create a **file-by-file plan** with per-file: path, content description, and any dependencies.
+5. Present the plan to the user and wait for approval.
+
+### Act mode
+
+1. After plan approval, write the exact files as specified.
+2. Adhere to the architecture, technology stack, and quality rules from the project definition.
+3. Follow the roadmap: mark completed tasks as \`done\` and update the Memory Bank.
+4. After each session: update \`activeContext.md\` and \`progress.md\` with progress.
+
+## 8. Quality Rules
+
+**Code style:** TypeScript strict mode, functional components, Tailwind classes
+**Testing strategy:** Manual review in MVP; vitest planned
+**Validation rules:**
+- Tasks must sync bidirectionally
+- Dashboard must load within 2 seconds
+**Fallback behavior:** Empty sections render a helpful hint instead of crashing
+
+## 9. Agent Configuration
+
+- **orchestrator** (gpt-4o): Convert raw project ideas into a structured ProjectDefinition JSON.
+- **plan** (claude-sonnet-4-20250514): Read the bootstrap prompt and present a file-by-file implementation plan.
+- **act** (claude-sonnet-4-20250514): Write the exact files specified in the plan.
+
+---
+
+**Assignment:** Now create an implementation plan and a file-by-file plan based on the above project definition. Do not write any code yet. Wait for approval before creating files."
+`;
+
+exports[`Golden Test Suite — Bootstrap Prompt Generator > generates bootstrap prompt for Travel Planner > bootstrap-prompt-travel-planner 1`] = `
+"Repository state: greenfield
+
+### Decision tree — inspect before planning
+
+Inspect the repository before planning.
+
+1. **Existing code found**
+   → Continue implementation within the current structure.
+2. **Empty repository found**
+   → Initialize the scaffold described in the ProjectDefinition.
+3. **Repository structure differs from the ProjectDefinition**
+   → Explain the mismatch and ask for confirmation before continuing.
+
+# Cline Bootstrap — Travel Planner
+
+You are receiving a complete project definition. Read it carefully and then create an implementation plan and file-by-file plan. **Do not write any code yet.**
+
+### 🆕 Greenfield project
+
+Create a brand new project from scratch. Initialize the scaffold, install dependencies, and set up the full project structure before implementing any features.
+
+## 1. Project Overview
+
+**Name:** Travel Planner
+**Tagline:** AI-assisted trip planning and itinerary builder
+**Version:** 0.1.0
+**Status:** idea
+
+**Description:**
+An intelligent travel planning app that helps users discover destinations, build itineraries, track budgets, and share trip plans with travel companions.
+
+## 2. Goals and Scope
+
+**Problem:** Planning a trip involves juggling multiple tabs, spreadsheets, and apps for flights, hotels, activities, and budgets, leading to a fragmented experience.
+**Solution:** A unified trip planning platform with AI-powered destination discovery, collaborative itinerary building, budget tracking, and sharing features.
+**Target users:**
+- Travel enthusiasts
+- Trip planners
+- Group travelers
+**User stories:**
+- As a traveler, I want AI suggestions for destinations based on my preferences.
+- As a group traveler, I want to collaborate on the itinerary with my companions.
+**MVP features:**
+- Destination discovery with AI suggestions
+- Itinerary builder with drag-and-drop
+- Budget tracker per trip
+- Trip sharing with companions
+
+## 3. Technology Stack
+
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript
+**Constraints:**
+- Offline access to saved trips
+- Collaborative editing with conflict resolution
+
+## 4. Architecture
+
+**Pattern:** Single-page application with offline-first architecture
+**Component tree:**
+\`\`\`
+App
+├── HomePage
+├── SearchResultsPage
+├── ListingDetailPage
+├── BookingPage
+├── TripDashboardPage
+├── UserProfilePage
+├── ReviewPage
+├── DestinationDiscoveryWithAISuggestions
+├── ItineraryBuilderWithDraganddrop
+├── BudgetTrackerPerTrip
+├── TripSharingWithCompanions
+\`\`\`
+**Data flow:**
+\`\`\`
+User searches destinations → browses listings → views details → books accommodation → payment processed → trip confirmed → review left after stay
+\`\`\`
+
+## 4b. Domain Model
+
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+
+## 5. Roadmap
+
+### Foundation & Setup ← CURRENT
+- [ ] Project scaffold opzetten
+
+### MVP — Core Features
+- [ ] Itinerary builder
+
+### Social Features
+- [ ] Trip sharing
+
+## 6. Memory Bank Instructions
+
+Cline uses a Memory Bank to maintain context between sessions. The following files must be created and maintained:
+
+- \`memory-bank/projectbrief.md\` — Core requirements and goals (required)
+- \`memory-bank/productContext.md\` — Why this exists and how it should work (required)
+- \`memory-bank/activeContext.md\` — Current focus and recent changes (required)
+- \`memory-bank/systemPatterns.md\` — Architecture and technical decisions (required)
+- \`memory-bank/techContext.md\` — Technologies and setup (required)
+- \`memory-bank/progress.md\` — What works and what's left (required)
+
+**Update cadence:** After every session and at milestones
+
+## 7. Work Instructions for Cline
+
+You work in two modes: **Plan** and **Act**. Follow these steps:
+
+### Plan mode
+
+1. Read the full bootstrap prompt and the ProjectDefinition above.
+2. Analyze the roadmap and determine which phase and task should be tackled first.
+3. Create an **implementation plan** with a clear order of steps.
+4. Create a **file-by-file plan** with per-file: path, content description, and any dependencies.
+5. Present the plan to the user and wait for approval.
+
+### Act mode
+
+1. After plan approval, write the exact files as specified.
+2. Adhere to the architecture, technology stack, and quality rules from the project definition.
+3. Follow the roadmap: mark completed tasks as \`done\` and update the Memory Bank.
+4. After each session: update \`activeContext.md\` and \`progress.md\` with progress.
+
+## 8. Quality Rules
+
+**Code style:** TypeScript strict mode, functional components, Tailwind classes
+**Testing strategy:** Manual review in MVP; vitest planned
+**Validation rules:**
+- Itinerary must support date ranges
+- Budget must calculate totals correctly
+**Fallback behavior:** Empty sections render a helpful hint instead of crashing
+
+## 9. Agent Configuration
+
+- **orchestrator** (gpt-4o): Convert raw project ideas into a structured ProjectDefinition JSON.
+- **plan** (claude-sonnet-4-20250514): Read the bootstrap prompt and present a file-by-file implementation plan.
+- **act** (claude-sonnet-4-20250514): Write the exact files specified in the plan.
+
+---
+
+**Assignment:** Now create an implementation plan and a file-by-file plan based on the above project definition. Do not write any code yet. Wait for approval before creating files."
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for CRM Pro > PRD-md-crm-pro 1`] = `
+"# Product Requirements Document — CRM Pro
+
+## Target Audience
+- Small business owners
+- Freelancers
+- Sales representatives
+
+## Problem Statement
+Small businesses find enterprise CRMs too complex and expensive, while spreadsheets lack the structure needed for effective sales tracking.
+
+## User Flow
+- **Story 1:** As a sales rep, I want to track deals through a pipeline.
+- **Story 2:** As a business owner, I want to see a dashboard with key metrics.
+
+## MVP Scope
+- Contact management with import/export
+- Deal pipeline with drag-and-drop
+- Dashboard with sales metrics
+- Basic reporting (monthly/quarterly)
+
+## Future Extensions
+- _CRM Pro future extensions — to be refined during project review._
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for CRM Pro > README-md-crm-pro 1`] = `
+"# CRM Pro
+
+> Simple CRM for small businesses
+
+## Overview
+A lightweight customer relationship management tool designed specifically for small businesses that need contact management, deal tracking, and basic reporting.
+
+## Problem
+Small businesses find enterprise CRMs too complex and expensive, while spreadsheets lack the structure needed for effective sales tracking.
+
+## Solution
+A simple, affordable CRM that provides contact management, deal pipeline tracking, and basic reporting without the enterprise overhead.
+
+## Tech Stack
+- **Frontend:** React
+- **Backend:** FastAPI
+- **Database:** PostgreSQL, Redis
+- **Other:** TypeScript, Python
+
+## MVP
+- Contact management with import/export
+- Deal pipeline with drag-and-drop
+- Dashboard with sales metrics
+- Basic reporting (monthly/quarterly)
+
+## Getting Started
+_Setup instructions for CRM Pro — to be added during implementation._
+
+## Roadmap
+- **Foundation & Setup**
+  - [x] Project scaffold opzetten
+- **MVP — Core Features**
+  - [x] Contact management
+- **Advanced Features** ← CURRENT
+  - [ ] Email integration
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for CRM Pro > SPEC-md-crm-pro 1`] = `
+"# Technical Specification — CRM Pro
+
+## Requirements
+A lightweight customer relationship management tool designed specifically for small businesses that need contact management, deal tracking, and basic reporting.
+
+## Non-goals
+- GDPR compliant data handling
+- Multi-tenant architecture
+
+## Architecture
+- **Pattern:** Microservices with REST API gateway
+
+### Component Tree
+\`\`\`
+App
+├── DashboardPage
+├── ContactListPage
+├── DealPipelinePage
+├── ActivityTimelinePage
+├── ReportPage
+├── SettingsPage
+├── ImportExportPage
+├── EmailIntegrationPage
+├── ContactManagementWithImportexport
+├── DealPipelineWithDraganddrop
+├── DashboardWithSalesMetrics
+├── BasicReportingMonthlyquarterly
+\`\`\`
+
+### Data Flow
+\`\`\`
+User adds contact → contact appears in pipeline → user moves deal through stages → dashboard updates metrics → reports generated from pipeline data
+\`\`\`
+
+## Data Model
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+
+## Quality Gates
+- Contact data must be exportable
+- Deal pipeline must support custom stages
+- **Code style:** TypeScript strict mode, Python type hints
+- **Testing:** Unit tests + integration tests
+- **Fallback behavior:** Empty sections render a helpful hint instead of crashing
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for CRM Pro > roadmap-md-crm-pro 1`] = `
+"# Roadmap — CRM Pro
+
+## Foundation & Setup
+- [x] Project scaffold opzetten
+
+## MVP — Core Features
+- [x] Contact management
+
+## Advanced Features ← CURRENT
+- [ ] Email integration
+
+Legend: [x] done · [ ] pending · ← CURRENT marks the active task.
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for FitFlow Studio > PRD-md-fitflow-studio 1`] = `
+"# Product Requirements Document — FitFlow Studio
+
+## Target Audience
+- Personal trainers
+- Fitness enthusiasts
+- People starting their fitness journey
+
+## Problem Statement
+Generic workout apps don't adapt to individual progress and preferences, leading to plateaus and loss of motivation.
+
+## User Flow
+- **Story 1:** As a user, I want to get a personalized workout plan based on my goals and equipment.
+- **Story 2:** As a user, I want to log my workouts and see progress over time.
+
+## MVP Scope
+- User onboarding with fitness assessment
+- AI-generated workout plan
+- Workout logging and tracking
+- Progress dashboard with charts
+
+## Future Extensions
+- _FitFlow Studio future extensions — to be refined during project review._
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for FitFlow Studio > README-md-fitflow-studio 1`] = `
+"# FitFlow Studio
+
+> AI-powered personal training app
+
+## Overview
+A mobile-first web app that generates personalized workout plans using AI, tracks progress, and adapts routines based on user feedback.
+
+## Problem
+Generic workout apps don't adapt to individual progress and preferences, leading to plateaus and loss of motivation.
+
+## Solution
+An AI-powered fitness app that creates dynamic workout plans that evolve with the user's progress, preferences, and feedback.
+
+## Tech Stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript, JavaScript
+
+## MVP
+- User onboarding with fitness assessment
+- AI-generated workout plan
+- Workout logging and tracking
+- Progress dashboard with charts
+
+## Getting Started
+_Setup instructions for FitFlow Studio — to be added during implementation._
+
+## Roadmap
+- **Foundation & Setup** ← CURRENT
+  - [ ] Project scaffold opzetten
+- **MVP — Core Features**
+  - [ ] Workout plan generator
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for FitFlow Studio > SPEC-md-fitflow-studio 1`] = `
+"# Technical Specification — FitFlow Studio
+
+## Requirements
+A mobile-first web app that generates personalized workout plans using AI, tracks progress, and adapts routines based on user feedback.
+
+## Non-goals
+- Mobile-first responsive design
+- Offline support for workout tracking
+
+## Architecture
+- **Pattern:** Progressive Web App with service worker caching
+
+### Component Tree
+\`\`\`
+App
+├── HomePage
+├── WorkoutPlannerPage
+├── ProgressDashboard
+├── ExerciseLibrary
+├── UserProfilePage
+├── SubscriptionPage
+├── SocialFeedPage
+├── UserOnboardingWithFitnessAssessment
+├── AIgeneratedWorkoutPlan
+├── WorkoutLoggingAndTracking
+├── ProgressDashboardWithCharts
+\`\`\`
+
+### Data Flow
+\`\`\`
+User creates profile → selects fitness goals → AI generates workout plan → user logs exercises → progress tracked and visualised → plan adapts based on feedback
+\`\`\`
+
+## Data Model
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+
+## Quality Gates
+- Workout plans must be valid and safe
+- Progress data must be stored locally
+- **Code style:** TypeScript strict mode, functional components, Tailwind classes
+- **Testing:** Manual review in MVP; vitest planned
+- **Fallback behavior:** Empty sections render a helpful hint instead of crashing
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for FitFlow Studio > roadmap-md-fitflow-studio 1`] = `
+"# Roadmap — FitFlow Studio
+
+## Foundation & Setup ← CURRENT
+- [ ] Project scaffold opzetten
+
+## MVP — Core Features
+- [ ] Workout plan generator
+
+Legend: [x] done · [ ] pending · ← CURRENT marks the active task.
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for PawPilot > PRD-md-pawpilot 1`] = `
+"# Product Requirements Document — PawPilot
+
+## Target Audience
+- Pet owners
+- Veterinarians
+- Pet care providers
+
+## Problem Statement
+Pet owners struggle to keep track of their pets' health records, appointments, and medications across multiple vet visits and providers.
+
+## User Flow
+- **Story 1:** As a pet owner, I want to store my pet's health records in one place.
+- **Story 2:** As a veterinarian, I want to access a pet's medical history before an appointment.
+
+## MVP Scope
+- Pet profile creation with health records
+- Appointment scheduling with calendar view
+- Medication tracking with reminders
+- Vet communication via in-app messaging
+
+## Future Extensions
+- _PawPilot future extensions — to be refined during project review._
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for PawPilot > README-md-pawpilot 1`] = `
+"# PawPilot
+
+> Pet care platform for pet owners and veterinarians
+
+## Overview
+A comprehensive pet care platform that connects pet owners with veterinarians. Features include appointment scheduling, pet health profiles, medical record management, medication tracking, and direct communication with vets.
+
+## Problem
+Pet owners struggle to keep track of their pets' health records, appointments, and medications across multiple vet visits and providers.
+
+## Solution
+A unified platform that centralizes pet health management with appointment scheduling, digital health records, medication reminders, and direct vet communication.
+
+## Tech Stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript
+
+## MVP
+- Pet profile creation with health records
+- Appointment scheduling with calendar view
+- Medication tracking with reminders
+- Vet communication via in-app messaging
+
+## Getting Started
+_Setup instructions for PawPilot — to be added during implementation._
+
+## Roadmap
+- **Foundation & Setup** ← CURRENT
+  - [ ] Initialize project with chosen tech stack
+  - [ ] Set up authentication and user profiles
+  - [ ] Configure database schema for products, users, orders
+- **Core Marketplace Features**
+  - [ ] Build product listing and management
+  - [ ] Implement search with filters and categories
+  - [ ] Create product detail pages with images
+- **Buyer & Seller Workflows**
+  - [ ] Build shopping cart and checkout flow
+  - [ ] Implement seller dashboard and analytics
+  - [ ] Add order management and tracking
+- **Advanced Features & Launch**
+  - [ ] Add payment gateway integration
+  - [ ] Implement reviews and ratings
+  - [ ] Add monitoring, testing, and production deployment
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for PawPilot > SPEC-md-pawpilot 1`] = `
+"# Technical Specification — PawPilot
+
+## Requirements
+A comprehensive pet care platform that connects pet owners with veterinarians. Features include appointment scheduling, pet health profiles, medical record management, medication tracking, and direct communication with vets.
+
+## Non-goals
+- Mobile-first responsive design
+- HIPAA/GDPR compliant data handling
+
+## Architecture
+- **Pattern:** Client-server with REST API, search index, and payment gateway
+
+### Component Tree
+\`\`\`
+App
+├── HomePage
+├── ProductListingPage
+├── ProductDetailPage
+├── SearchResultsPage
+├── SellerDashboardPage
+├── CartPage
+├── CheckoutPage
+├── UserProfilePage
+├── AdminDashboardPage
+├── PetProfileCreationWithHealthRecords
+├── AppointmentSchedulingWithCalendarView
+├── MedicationTrackingWithReminders
+├── VetCommunicationViaInappMessaging
+\`\`\`
+
+### Data Flow
+\`\`\`
+Seller lists product → product indexed in search → buyer browses/search → buyer views detail → buyer adds to cart → checkout processes payment → order created → seller notified → tracking updated
+\`\`\`
+
+## Data Model
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+
+## Quality Gates
+- Pet health data must be stored securely
+- Appointment scheduling must prevent double-booking
+- **Code style:** TypeScript strict mode, functional components, Tailwind classes
+- **Testing:** Manual review in MVP; vitest planned
+- **Fallback behavior:** Empty sections render a helpful hint instead of crashing
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for PawPilot > roadmap-md-pawpilot 1`] = `
+"# Roadmap — PawPilot
+
+## Foundation & Setup ← CURRENT
+- [ ] Initialize project with chosen tech stack
+- [ ] Set up authentication and user profiles
+- [ ] Configure database schema for products, users, orders
+
+## Core Marketplace Features
+- [ ] Build product listing and management
+- [ ] Implement search with filters and categories
+- [ ] Create product detail pages with images
+
+## Buyer & Seller Workflows
+- [ ] Build shopping cart and checkout flow
+- [ ] Implement seller dashboard and analytics
+- [ ] Add order management and tracking
+
+## Advanced Features & Launch
+- [ ] Add payment gateway integration
+- [ ] Implement reviews and ratings
+- [ ] Add monitoring, testing, and production deployment
+
+Legend: [x] done · [ ] pending · ← CURRENT marks the active task.
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for RestaurantFlow > PRD-md-restaurantflow 1`] = `
+"# Product Requirements Document — RestaurantFlow
+
+## Target Audience
+- Restaurant owners
+- Restaurant managers
+- Waitstaff
+
+## Problem Statement
+Restaurants struggle with coordinating reservations, table assignments, and orders using paper-based or disconnected digital tools.
+
+## User Flow
+- **Story 1:** As a host, I want to manage reservations and assign tables visually.
+- **Story 2:** As a waiter, I want to send orders to the kitchen digitally.
+
+## MVP Scope
+- Reservation calendar with table management
+- Digital order taking and kitchen display
+- Menu management with categories
+- Real-time table status overview
+
+## Future Extensions
+- _RestaurantFlow future extensions — to be refined during project review._
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for RestaurantFlow > README-md-restaurantflow 1`] = `
+"# RestaurantFlow
+
+> Digital restaurant management system
+
+## Overview
+A comprehensive system for restaurants to manage reservations, table assignments, menu updates, and order tracking in real-time.
+
+## Problem
+Restaurants struggle with coordinating reservations, table assignments, and orders using paper-based or disconnected digital tools.
+
+## Solution
+A unified digital platform that streamlines reservation management, table assignment, and order tracking with real-time updates.
+
+## Tech Stack
+- **Frontend:** React
+- **Backend:** Node.js, Express
+- **Database:** PostgreSQL
+- **Other:** TypeScript, SQL
+
+## MVP
+- Reservation calendar with table management
+- Digital order taking and kitchen display
+- Menu management with categories
+- Real-time table status overview
+
+## Getting Started
+_Setup instructions for RestaurantFlow — to be added during implementation._
+
+## Roadmap
+- **Foundation & Setup**
+  - [x] Database schema ontwerpen
+- **MVP — Core Features** ← CURRENT
+  - [ ] Reservation system
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for RestaurantFlow > SPEC-md-restaurantflow 1`] = `
+"# Technical Specification — RestaurantFlow
+
+## Requirements
+A comprehensive system for restaurants to manage reservations, table assignments, menu updates, and order tracking in real-time.
+
+## Non-goals
+- Real-time sync required
+- Multi-device support (tablet, kiosk, kitchen display)
+
+## Architecture
+- **Pattern:** Client-server architecture with WebSocket real-time updates
+
+### Component Tree
+\`\`\`
+App
+├── DashboardPage
+├── ReservationCalendarPage
+├── OrderManagementPage
+├── MenuManagementPage
+├── KitchenDisplayPage
+├── TableManagementPage
+├── CustomerProfilePage
+├── ReportPage
+├── ReservationCalendarWithTableManagement
+├── DigitalOrderTakingAndKitchenDisplay
+├── MenuManagementWithCategories
+├── RealtimeTableStatusOverview
+\`\`\`
+
+### Data Flow
+\`\`\`
+Customer makes reservation → host assigns table → waiter takes order → order sent to kitchen display → kitchen prepares and marks complete → waiter serves → payment processed → table freed
+\`\`\`
+
+## Data Model
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+
+## Quality Gates
+- Reservations must not double-book tables
+- Orders must reach kitchen within 2 seconds
+- **Code style:** TypeScript strict mode, functional components
+- **Testing:** Integration tests for API endpoints
+- **Fallback behavior:** Empty sections render a helpful hint instead of crashing
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for RestaurantFlow > roadmap-md-restaurantflow 1`] = `
+"# Roadmap — RestaurantFlow
+
+## Foundation & Setup
+- [x] Database schema ontwerpen
+
+## MVP — Core Features ← CURRENT
+- [ ] Reservation system
+
+Legend: [x] done · [ ] pending · ← CURRENT marks the active task.
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for RetroForge > PRD-md-retroforge 1`] = `
+"# Product Requirements Document — RetroForge
+
+## Target Audience
+- Retro gaming enthusiasts
+- Emulator developers
+- Game preservationists
+
+## Problem Statement
+Retro gaming enthusiasts struggle to find modern, cross-platform emulators that work seamlessly in the browser without complex setup or dedicated hardware.
+
+## User Flow
+- **Story 1:** As a retro gamer, I want to load ROMs and play classic games in my browser.
+- **Story 2:** As a gamer, I want to save and load my progress at any point.
+- **Story 3:** As a power user, I want to configure controller mappings for different platforms.
+
+## MVP Scope
+- ROM loading and parsing for NES/SNES/Game Boy
+- Emulation core with CPU, GPU, and audio
+- Save state creation and loading
+- Controller configuration UI
+- ROM library with grid view
+
+## Future Extensions
+- _RetroForge future extensions — to be refined during project review._
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for RetroForge > README-md-retroforge 1`] = `
+"# RetroForge
+
+> Web-based retro game emulator for classic console experiences
+
+## Overview
+A browser-based retro game emulator that supports NES, SNES, and Game Boy platforms. Features include ROM loading, save state management, controller configuration, and cheat code support. Built with WebAssembly for high-performance emulation.
+
+## Problem
+Retro gaming enthusiasts struggle to find modern, cross-platform emulators that work seamlessly in the browser without complex setup or dedicated hardware.
+
+## Solution
+A web-based emulator platform that brings classic console gaming to any modern browser with save states, controller support, and a clean library management interface.
+
+## Tech Stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript, C++, WebAssembly, Emscripten, SDL2, OpenGL, IndexedDB
+
+## MVP
+- ROM loading and parsing for NES/SNES/Game Boy
+- Emulation core with CPU, GPU, and audio
+- Save state creation and loading
+- Controller configuration UI
+- ROM library with grid view
+
+## Getting Started
+_Setup instructions for RetroForge — to be added during implementation._
+
+## Roadmap
+- **Foundation & Setup** ← CURRENT
+  - [ ] Initialize project with chosen tech stack
+  - [ ] Set up emulator core integration
+  - [ ] Configure ROM loading and file management
+- **Core Emulation Features**
+  - [ ] Build game library with metadata scraping
+  - [ ] Implement emulator core with save states
+  - [ ] Add controller mapping and input handling
+- **User Experience**
+  - [ ] Build save state management UI
+  - [ ] Implement cheat code support
+  - [ ] Add display filters and scaling options
+- **Advanced Features & Launch**
+  - [ ] Add multiplayer/netplay support
+  - [ ] Implement achievement system
+  - [ ] Add monitoring, testing, and production deployment
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for RetroForge > SPEC-md-retroforge 1`] = `
+"# Technical Specification — RetroForge
+
+## Requirements
+A browser-based retro game emulator that supports NES, SNES, and Game Boy platforms. Features include ROM loading, save state management, controller configuration, and cheat code support. Built with WebAssembly for high-performance emulation.
+
+## Non-goals
+- WebAssembly-based emulation core
+- IndexedDB for ROM and save state storage
+- Offline-capable after initial load
+
+## Architecture
+- **Pattern:** Desktop application with plugin-based emulator cores and local file storage
+
+### Component Tree
+\`\`\`
+App
+├── HomePage
+├── GameLibraryPage
+├── EmulatorCorePage
+├── RomManagerPage
+├── SaveStatePage
+├── ControllerConfigPage
+├── SettingsPage
+├── ROMLoadingAndParsingForNESSNESGameBoy
+├── EmulationCoreWithCPUGPUAndAudio
+├── SaveStateCreationAndLoading
+├── ControllerConfigurationUI
+├── ROMLibraryWithGridView
+\`\`\`
+
+### Data Flow
+\`\`\`
+User launches app → browses game library → selects ROM → emulator core loads → game renders with audio/video → user plays with mapped controls → save state created → progress persisted
+\`\`\`
+
+## Data Model
+### Entities
+- **ROM**: Game ROM file for emulation
+- **SaveState**: Saved game state snapshot
+- **Game**: Retro game instance
+- **ControllerConfig**: Controller mapping configuration
+- **EmulatorCore**: Emulation core engine
+
+## Quality Gates
+- ROM files must be validated before loading
+- Save states must be portable across sessions
+- **Code style:** TypeScript strict mode, C++ with modern standards
+- **Testing:** Unit tests for emulation core; integration tests for UI
+- **Fallback behavior:** Empty sections render a helpful hint instead of crashing
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for RetroForge > roadmap-md-retroforge 1`] = `
+"# Roadmap — RetroForge
+
+## Foundation & Setup ← CURRENT
+- [ ] Initialize project with chosen tech stack
+- [ ] Set up emulator core integration
+- [ ] Configure ROM loading and file management
+
+## Core Emulation Features
+- [ ] Build game library with metadata scraping
+- [ ] Implement emulator core with save states
+- [ ] Add controller mapping and input handling
+
+## User Experience
+- [ ] Build save state management UI
+- [ ] Implement cheat code support
+- [ ] Add display filters and scaling options
+
+## Advanced Features & Launch
+- [ ] Add multiplayer/netplay support
+- [ ] Implement achievement system
+- [ ] Add monitoring, testing, and production deployment
+
+Legend: [x] done · [ ] pending · ← CURRENT marks the active task.
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for SolarPro Lokaal > PRD-md-solarpro-lokaal 1`] = `
+"# Product Requirements Document — SolarPro Lokaal
+
+## Target Audience
+- Zonnepaneleninstallateurs
+- MKB-bedrijven in de zonne-energie
+
+## Problem Statement
+Lokale zonnepaneleninstallateurs hebben geen professioneel offerteplatform, waardoor ze tijd verliezen met handmatige offertes en een minder professionele uitstraling hebben.
+
+## User Flow
+- **Story 1:** Als installateur wil ik een offerte kunnen maken op basis van een template, zodat ik tijd bespaar.
+- **Story 2:** Als installateur wil ik klantgegevens kunnen opslaan, zodat ik ze niet elke keer opnieuw hoef in te voeren.
+
+## MVP Scope
+- Offerte maken met template
+- Klantbeheer met adresgegevens
+- Offerte exporteren als PDF
+- Offerte status bijhouden (concept/verzonden/goedgekeurd)
+
+## Future Extensions
+- _SolarPro Lokaal future extensions — to be refined during project review._
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for SolarPro Lokaal > README-md-solarpro-lokaal 1`] = `
+"# SolarPro Lokaal
+
+> Lokaal offerteplatform voor zonnepaneleninstallateurs
+
+## Overview
+Een platform waar lokale zonnepaneleninstallateurs offertes kunnen maken, beheren en versturen naar klanten. Het platform biedt een professionele uitstraling met een eenvoudige workflow.
+
+## Problem
+Lokale zonnepaneleninstallateurs hebben geen professioneel offerteplatform, waardoor ze tijd verliezen met handmatige offertes en een minder professionele uitstraling hebben.
+
+## Solution
+Een gebruiksvriendelijk webplatform waar installateurs snel offertes kunnen genereren, beheren en versturen, met een professionele template en klantbeheer.
+
+## Tech Stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript, HTML, CSS
+
+## MVP
+- Offerte maken met template
+- Klantbeheer met adresgegevens
+- Offerte exporteren als PDF
+- Offerte status bijhouden (concept/verzonden/goedgekeurd)
+
+## Getting Started
+_Setup instructions for SolarPro Lokaal — to be added during implementation._
+
+## Roadmap
+- **Foundation & Setup** ← CURRENT
+  - [ ] Project scaffold opzetten
+- **MVP — Kernfunctionaliteit**
+  - [ ] Offerte template bouwen
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for SolarPro Lokaal > SPEC-md-solarpro-lokaal 1`] = `
+"# Technical Specification — SolarPro Lokaal
+
+## Requirements
+Een platform waar lokale zonnepaneleninstallateurs offertes kunnen maken, beheren en versturen naar klanten. Het platform biedt een professionele uitstraling met een eenvoudige workflow.
+
+## Non-goals
+- Lokaal draaiend zonder backend
+- Offertes moeten offline beschikbaar zijn
+
+## Architecture
+- **Pattern:** Single-page application met client-side routing
+
+### Component Tree
+\`\`\`
+App
+├── DashboardPage
+├── ContactListPage
+├── DealPipelinePage
+├── ActivityTimelinePage
+├── ReportPage
+├── SettingsPage
+├── ImportExportPage
+├── EmailIntegrationPage
+├── OfferteMakenMetTemplate
+├── KlantbeheerMetAdresgegevens
+├── OfferteExporterenAlsPDF
+├── OfferteStatusBijhoudenConceptverzondengoedgekeurd
+\`\`\`
+
+### Data Flow
+\`\`\`
+User adds contact → contact appears in pipeline → user moves deal through stages → dashboard updates metrics → reports generated from pipeline data
+\`\`\`
+
+## Data Model
+### Entities
+- **Panel**: Solar panel product
+- **Installation**: Solar panel installation project
+- **Quote**: Customer quote for solar installation
+- **Customer**: Customer requesting a quote
+
+## Quality Gates
+- Offerte template moet valide PDF opleveren
+- Klantgegevens moeten lokaal worden opgeslagen
+- **Code style:** TypeScript strict mode, functional components, Tailwind classes
+- **Testing:** Manual review in MVP
+- **Fallback behavior:** Empty sections render a helpful hint instead of crashing
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for SolarPro Lokaal > roadmap-md-solarpro-lokaal 1`] = `
+"# Roadmap — SolarPro Lokaal
+
+## Foundation & Setup ← CURRENT
+- [ ] Project scaffold opzetten
+
+## MVP — Kernfunctionaliteit
+- [ ] Offerte template bouwen
+
+Legend: [x] done · [ ] pending · ← CURRENT marks the active task.
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for TaskForge > PRD-md-taskforge 1`] = `
+"# Product Requirements Document — New Software Project
+
+## Target Audience
+- Developers
+- Tech leads
+- Developers
+- Project managers
+
+## Problem Statement
+Developers work across multiple projects and tools, making it hard to track what they're working on.
+
+## User Flow
+- **Story 1:** As a developer, I want to see all my tasks from GitHub and Jira in one dashboard.
+- **Story 2:** As a tech lead, I want to see my team's workload across projects.
+
+## MVP Scope
+- GitHub issue integration
+- Jira ticket integration
+- Unified task dashboard
+- Team workload view
+
+## Future Extensions
+- _New Software Project future extensions — to be refined during project review._
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for TaskForge > README-md-taskforge 1`] = `
+"# New Software Project
+
+> AI-ready software project
+
+## Overview
+I want to build a tool that helps developers track their tasks across multiple projects. The tool should integrate with GitHub and Jira and provide a unified dashboard.
+
+## Problem
+Developers work across multiple projects and tools, making it hard to track what they're working on.
+
+## Solution
+A unified task tracking dashboard that aggregates tasks from GitHub and Jira into a single view.
+
+## Tech Stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript
+
+## MVP
+- GitHub issue integration
+- Jira ticket integration
+- Unified task dashboard
+- Team workload view
+
+## Getting Started
+_Setup instructions for New Software Project — to be added during implementation._
+
+## Roadmap
+- **Foundation & Setup** ← CURRENT
+  - [ ] Initialize project with chosen tech stack
+  - [ ] Set up database schema for projects, tasks, and teams
+  - [ ] Configure authentication and role-based access
+- **Core Project Features**
+  - [ ] Build project creation and management
+  - [ ] Implement task board with drag-and-drop
+  - [ ] Add task detail view with comments
+- **Team & Collaboration**
+  - [ ] Build team management and permissions
+  - [ ] Implement real-time collaboration
+  - [ ] Add notifications and activity feed
+- **Advanced Features & Launch**
+  - [ ] Add timeline and Gantt chart view
+  - [ ] Implement reporting and export
+  - [ ] Add monitoring, testing, and production deployment
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for TaskForge > SPEC-md-taskforge 1`] = `
+"# Technical Specification — New Software Project
+
+## Requirements
+I want to build a tool that helps developers track their tasks across multiple projects. The tool should integrate with GitHub and Jira and provide a unified dashboard.
+
+## Non-goals
+- Local-first with optional cloud sync
+- OAuth for GitHub and Jira
+
+## Architecture
+- **Pattern:** Client-server with real-time updates, drag-and-drop boards, and role-based access
+
+### Component Tree
+\`\`\`
+App
+├── DashboardPage
+├── BoardViewPage
+├── TaskDetailPage
+├── TimelinePage
+├── TeamPage
+├── ReportPage
+├── SettingsPage
+├── GitHubIssueIntegration
+├── JiraTicketIntegration
+├── UnifiedTaskDashboard
+├── TeamWorkloadView
+\`\`\`
+
+### Data Flow
+\`\`\`
+Project manager creates project → defines tasks and milestones → team members assigned → work tracked on board → progress updated → reports generated → project completed
+\`\`\`
+
+## Data Model
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+
+## Quality Gates
+- Tasks must sync bidirectionally
+- Dashboard must load within 2 seconds
+- **Code style:** TypeScript strict mode, functional components, Tailwind classes
+- **Testing:** Manual review in MVP; vitest planned
+- **Fallback behavior:** Empty sections render a helpful hint instead of crashing
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for TaskForge > roadmap-md-taskforge 1`] = `
+"# Roadmap — New Software Project
+
+## Foundation & Setup ← CURRENT
+- [ ] Initialize project with chosen tech stack
+- [ ] Set up database schema for projects, tasks, and teams
+- [ ] Configure authentication and role-based access
+
+## Core Project Features
+- [ ] Build project creation and management
+- [ ] Implement task board with drag-and-drop
+- [ ] Add task detail view with comments
+
+## Team & Collaboration
+- [ ] Build team management and permissions
+- [ ] Implement real-time collaboration
+- [ ] Add notifications and activity feed
+
+## Advanced Features & Launch
+- [ ] Add timeline and Gantt chart view
+- [ ] Implement reporting and export
+- [ ] Add monitoring, testing, and production deployment
+
+Legend: [x] done · [ ] pending · ← CURRENT marks the active task.
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for Travel Planner > PRD-md-travel-planner 1`] = `
+"# Product Requirements Document — Travel Planner
+
+## Target Audience
+- Travel enthusiasts
+- Trip planners
+- Group travelers
+
+## Problem Statement
+Planning a trip involves juggling multiple tabs, spreadsheets, and apps for flights, hotels, activities, and budgets, leading to a fragmented experience.
+
+## User Flow
+- **Story 1:** As a traveler, I want AI suggestions for destinations based on my preferences.
+- **Story 2:** As a group traveler, I want to collaborate on the itinerary with my companions.
+
+## MVP Scope
+- Destination discovery with AI suggestions
+- Itinerary builder with drag-and-drop
+- Budget tracker per trip
+- Trip sharing with companions
+
+## Future Extensions
+- _Travel Planner future extensions — to be refined during project review._
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for Travel Planner > README-md-travel-planner 1`] = `
+"# Travel Planner
+
+> AI-assisted trip planning and itinerary builder
+
+## Overview
+An intelligent travel planning app that helps users discover destinations, build itineraries, track budgets, and share trip plans with travel companions.
+
+## Problem
+Planning a trip involves juggling multiple tabs, spreadsheets, and apps for flights, hotels, activities, and budgets, leading to a fragmented experience.
+
+## Solution
+A unified trip planning platform with AI-powered destination discovery, collaborative itinerary building, budget tracking, and sharing features.
+
+## Tech Stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript
+
+## MVP
+- Destination discovery with AI suggestions
+- Itinerary builder with drag-and-drop
+- Budget tracker per trip
+- Trip sharing with companions
+
+## Getting Started
+_Setup instructions for Travel Planner — to be added during implementation._
+
+## Roadmap
+- **Foundation & Setup** ← CURRENT
+  - [ ] Project scaffold opzetten
+- **MVP — Core Features**
+  - [ ] Itinerary builder
+- **Social Features**
+  - [ ] Trip sharing
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for Travel Planner > SPEC-md-travel-planner 1`] = `
+"# Technical Specification — Travel Planner
+
+## Requirements
+An intelligent travel planning app that helps users discover destinations, build itineraries, track budgets, and share trip plans with travel companions.
+
+## Non-goals
+- Offline access to saved trips
+- Collaborative editing with conflict resolution
+
+## Architecture
+- **Pattern:** Single-page application with offline-first architecture
+
+### Component Tree
+\`\`\`
+App
+├── HomePage
+├── SearchResultsPage
+├── ListingDetailPage
+├── BookingPage
+├── TripDashboardPage
+├── UserProfilePage
+├── ReviewPage
+├── DestinationDiscoveryWithAISuggestions
+├── ItineraryBuilderWithDraganddrop
+├── BudgetTrackerPerTrip
+├── TripSharingWithCompanions
+\`\`\`
+
+### Data Flow
+\`\`\`
+User searches destinations → browses listings → views details → books accommodation → payment processed → trip confirmed → review left after stay
+\`\`\`
+
+## Data Model
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+
+## Quality Gates
+- Itinerary must support date ranges
+- Budget must calculate totals correctly
+- **Code style:** TypeScript strict mode, functional components, Tailwind classes
+- **Testing:** Manual review in MVP; vitest planned
+- **Fallback behavior:** Empty sections render a helpful hint instead of crashing
+"
+`;
+
+exports[`Golden Test Suite — Documentation Generator > generates documentation files for Travel Planner > roadmap-md-travel-planner 1`] = `
+"# Roadmap — Travel Planner
+
+## Foundation & Setup ← CURRENT
+- [ ] Project scaffold opzetten
+
+## MVP — Core Features
+- [ ] Itinerary builder
+
+## Social Features
+- [ ] Trip sharing
+
+Legend: [x] done · [ ] pending · ← CURRENT marks the active task.
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for CRM Pro > memory-bank-activeContext-md-crm-pro 1`] = `
+"# Active Context — CRM Pro
+
+## Current focus
+Phase: Advanced Features
+Active task: Email integration
+
+## Recent changes
+- Project bootstrapped via VibeForge
+
+## Next steps
+- Advanced Features ← CURRENT
+  - Email integration
+
+## Active decisions
+- Stack: TypeScript, Python / React, FastAPI, PostgreSQL, Redis
+- Architecture: Microservices with REST API gateway
+- Constraints:
+  - GDPR compliant data handling
+  - Multi-tenant architecture
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for CRM Pro > memory-bank-productContext-md-crm-pro 1`] = `
+"# Product Context — CRM Pro
+
+## Why this exists
+Small businesses find enterprise CRMs too complex and expensive, while spreadsheets lack the structure needed for effective sales tracking.
+
+## How it should work
+A simple, affordable CRM that provides contact management, deal pipeline tracking, and basic reporting without the enterprise overhead.
+
+## Target users
+- Small business owners
+- Freelancers
+- Sales representatives
+
+## User stories
+- As a sales rep, I want to track deals through a pipeline.
+- As a business owner, I want to see a dashboard with key metrics.
+
+## MVP scope
+- Contact management with import/export
+- Deal pipeline with drag-and-drop
+- Dashboard with sales metrics
+- Basic reporting (monthly/quarterly)
+
+## Quality rules
+- Contact data must be exportable
+- Deal pipeline must support custom stages
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for CRM Pro > memory-bank-progress-md-crm-pro 1`] = `
+"# Progress — CRM Pro
+
+## STATUS
+CURRENT_PHASE: Advanced Features
+DONE_LAST_SESSION: Project scaffold opzetten, Contact management
+NEXT: Email integration
+BLOCKERS: none
+
+## What works
+- Project scaffold opzetten
+- Contact management
+
+## What's left
+- Email integration
+
+## Phase breakdown
+
+### Foundation & Setup
+- [x] Project scaffold opzetten
+
+### MVP — Core Features
+- [x] Contact management
+
+### Advanced Features ← CURRENT
+- [ ] Email integration
+
+## Known issues
+- none yet
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for CRM Pro > memory-bank-projectbrief-md-crm-pro 1`] = `
+"# Project Brief — CRM Pro
+
+## Core requirements
+A lightweight customer relationship management tool designed specifically for small businesses that need contact management, deal tracking, and basic reporting.
+
+## Goals
+- A simple
+- affordable CRM that provides contact management
+- deal pipeline tracking
+- and basic reporting without the enterprise overhead
+
+## Scope
+- Contact management with import/export
+- Deal pipeline with drag-and-drop
+- Dashboard with sales metrics
+- Basic reporting (monthly/quarterly)
+
+## Target users
+- Small business owners
+- Freelancers
+- Sales representatives
+
+## Tech stack
+- **Frontend:** React
+- **Backend:** FastAPI
+- **Database:** PostgreSQL, Redis
+- **Other:** TypeScript, Python
+
+## Quality rules
+- Contact data must be exportable
+- Deal pipeline must support custom stages
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for CRM Pro > memory-bank-systemPatterns-md-crm-pro 1`] = `
+"# System Patterns — CRM Pro
+
+## Architecture
+Microservices with REST API gateway
+
+## Directory structure
+_CRM Pro directory structure — to be refined during project review._
+
+## Component tree
+\`\`\`
+App
+├── DashboardPage
+├── ContactListPage
+├── DealPipelinePage
+├── ActivityTimelinePage
+├── ReportPage
+├── SettingsPage
+├── ImportExportPage
+├── EmailIntegrationPage
+├── ContactManagementWithImportexport
+├── DealPipelineWithDraganddrop
+├── DashboardWithSalesMetrics
+├── BasicReportingMonthlyquarterly
+\`\`\`
+
+## Data flow
+\`\`\`
+User adds contact → contact appears in pipeline → user moves deal through stages → dashboard updates metrics → reports generated from pipeline data
+\`\`\`
+
+## Key technical decisions
+- Languages: TypeScript, Python
+- Frameworks: React, FastAPI, PostgreSQL, Redis
+- Dependencies: PostgreSQL, Redis
+
+## Constraints
+- GDPR compliant data handling
+- Multi-tenant architecture
+
+## Domain Model
+
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for CRM Pro > memory-bank-techContext-md-crm-pro 1`] = `
+"# Tech Context — CRM Pro
+
+## Technologies used
+- **Frontend:** React
+- **Backend:** FastAPI
+- **Database:** PostgreSQL, Redis
+- **Other:** TypeScript, Python
+
+## Constraints
+- GDPR compliant data handling
+- Multi-tenant architecture
+
+## Setup
+_CRM Pro setup instructions — to be refined during project review._
+
+## Development
+- Code style: TypeScript strict mode, Python type hints
+- Testing: Unit tests + integration tests
+- Fallback behavior: Empty sections render a helpful hint instead of crashing
+
+## Quality rules
+- Contact data must be exportable
+- Deal pipeline must support custom stages
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for FitFlow Studio > memory-bank-activeContext-md-fitflow-studio 1`] = `
+"# Active Context — FitFlow Studio
+
+## Current focus
+Phase: Foundation & Setup
+Active task: Project scaffold opzetten
+
+## Recent changes
+- Project bootstrapped via VibeForge
+
+## Next steps
+- Foundation & Setup ← CURRENT
+  - Project scaffold opzetten
+- MVP — Core Features
+  - Workout plan generator
+
+## Active decisions
+- Stack: TypeScript, JavaScript / React, Vite, Tailwind CSS
+- Architecture: Progressive Web App with service worker caching
+- Constraints:
+  - Mobile-first responsive design
+  - Offline support for workout tracking
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for FitFlow Studio > memory-bank-productContext-md-fitflow-studio 1`] = `
+"# Product Context — FitFlow Studio
+
+## Why this exists
+Generic workout apps don't adapt to individual progress and preferences, leading to plateaus and loss of motivation.
+
+## How it should work
+An AI-powered fitness app that creates dynamic workout plans that evolve with the user's progress, preferences, and feedback.
+
+## Target users
+- Personal trainers
+- Fitness enthusiasts
+- People starting their fitness journey
+
+## User stories
+- As a user, I want to get a personalized workout plan based on my goals and equipment.
+- As a user, I want to log my workouts and see progress over time.
+
+## MVP scope
+- User onboarding with fitness assessment
+- AI-generated workout plan
+- Workout logging and tracking
+- Progress dashboard with charts
+
+## Quality rules
+- Workout plans must be valid and safe
+- Progress data must be stored locally
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for FitFlow Studio > memory-bank-progress-md-fitflow-studio 1`] = `
+"# Progress — FitFlow Studio
+
+## STATUS
+CURRENT_PHASE: Foundation & Setup
+DONE_LAST_SESSION: none
+NEXT: Project scaffold opzetten
+BLOCKERS: none
+
+## What works
+- _(nothing completed yet)_
+
+## What's left
+- Project scaffold opzetten
+- Workout plan generator
+
+## Phase breakdown
+
+### Foundation & Setup ← CURRENT
+- [ ] Project scaffold opzetten
+
+### MVP — Core Features
+- [ ] Workout plan generator
+
+## Known issues
+- none yet
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for FitFlow Studio > memory-bank-projectbrief-md-fitflow-studio 1`] = `
+"# Project Brief — FitFlow Studio
+
+## Core requirements
+A mobile-first web app that generates personalized workout plans using AI, tracks progress, and adapts routines based on user feedback.
+
+## Goals
+- An AI-powered fitness app that creates dynamic workout plans that evolve with the user's progress
+- preferences
+- and feedback
+
+## Scope
+- User onboarding with fitness assessment
+- AI-generated workout plan
+- Workout logging and tracking
+- Progress dashboard with charts
+
+## Target users
+- Personal trainers
+- Fitness enthusiasts
+- People starting their fitness journey
+
+## Tech stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript, JavaScript
+
+## Quality rules
+- Workout plans must be valid and safe
+- Progress data must be stored locally
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for FitFlow Studio > memory-bank-systemPatterns-md-fitflow-studio 1`] = `
+"# System Patterns — FitFlow Studio
+
+## Architecture
+Progressive Web App with service worker caching
+
+## Directory structure
+_FitFlow Studio directory structure — to be refined during project review._
+
+## Component tree
+\`\`\`
+App
+├── HomePage
+├── WorkoutPlannerPage
+├── ProgressDashboard
+├── ExerciseLibrary
+├── UserProfilePage
+├── SubscriptionPage
+├── SocialFeedPage
+├── UserOnboardingWithFitnessAssessment
+├── AIgeneratedWorkoutPlan
+├── WorkoutLoggingAndTracking
+├── ProgressDashboardWithCharts
+\`\`\`
+
+## Data flow
+\`\`\`
+User creates profile → selects fitness goals → AI generates workout plan → user logs exercises → progress tracked and visualised → plan adapts based on feedback
+\`\`\`
+
+## Key technical decisions
+- Languages: TypeScript, JavaScript
+- Frameworks: React, Vite, Tailwind CSS
+
+## Constraints
+- Mobile-first responsive design
+- Offline support for workout tracking
+
+## Domain Model
+
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for FitFlow Studio > memory-bank-techContext-md-fitflow-studio 1`] = `
+"# Tech Context — FitFlow Studio
+
+## Technologies used
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript, JavaScript
+
+## Constraints
+- Mobile-first responsive design
+- Offline support for workout tracking
+
+## Setup
+_FitFlow Studio setup instructions — to be refined during project review._
+
+## Development
+- Code style: TypeScript strict mode, functional components, Tailwind classes
+- Testing: Manual review in MVP; vitest planned
+- Fallback behavior: Empty sections render a helpful hint instead of crashing
+
+## Quality rules
+- Workout plans must be valid and safe
+- Progress data must be stored locally
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for PawPilot > memory-bank-activeContext-md-pawpilot 1`] = `
+"# Active Context — PawPilot
+
+## Current focus
+Phase: Foundation & Setup
+Active task: Initialize project with chosen tech stack
+
+## Recent changes
+- Project bootstrapped via VibeForge
+
+## Next steps
+- Foundation & Setup ← CURRENT
+  - Initialize project with chosen tech stack
+  - Set up authentication and user profiles
+  - Configure database schema for products, users, orders
+- Core Marketplace Features
+  - Build product listing and management
+  - Implement search with filters and categories
+  - Create product detail pages with images
+- Buyer & Seller Workflows
+  - Build shopping cart and checkout flow
+  - Implement seller dashboard and analytics
+  - Add order management and tracking
+- Advanced Features & Launch
+  - Add payment gateway integration
+  - Implement reviews and ratings
+  - Add monitoring, testing, and production deployment
+
+## Active decisions
+- Stack: TypeScript / React, Vite, Tailwind CSS
+- Architecture: Client-server with REST API, search index, and payment gateway
+- Constraints:
+  - Mobile-first responsive design
+  - HIPAA/GDPR compliant data handling
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for PawPilot > memory-bank-productContext-md-pawpilot 1`] = `
+"# Product Context — PawPilot
+
+## Why this exists
+Pet owners struggle to keep track of their pets' health records, appointments, and medications across multiple vet visits and providers.
+
+## How it should work
+A unified platform that centralizes pet health management with appointment scheduling, digital health records, medication reminders, and direct vet communication.
+
+## Target users
+- Pet owners
+- Veterinarians
+- Pet care providers
+
+## User stories
+- As a pet owner, I want to store my pet's health records in one place.
+- As a veterinarian, I want to access a pet's medical history before an appointment.
+
+## MVP scope
+- Pet profile creation with health records
+- Appointment scheduling with calendar view
+- Medication tracking with reminders
+- Vet communication via in-app messaging
+
+## Quality rules
+- Pet health data must be stored securely
+- Appointment scheduling must prevent double-booking
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for PawPilot > memory-bank-progress-md-pawpilot 1`] = `
+"# Progress — PawPilot
+
+## STATUS
+CURRENT_PHASE: Foundation & Setup
+DONE_LAST_SESSION: none
+NEXT: Initialize project with chosen tech stack
+BLOCKERS: none
+
+## What works
+- _(nothing completed yet)_
+
+## What's left
+- Initialize project with chosen tech stack
+- Set up authentication and user profiles
+- Configure database schema for products, users, orders
+- Build product listing and management
+- Implement search with filters and categories
+- Create product detail pages with images
+- Build shopping cart and checkout flow
+- Implement seller dashboard and analytics
+- Add order management and tracking
+- Add payment gateway integration
+- Implement reviews and ratings
+- Add monitoring, testing, and production deployment
+
+## Phase breakdown
+
+### Foundation & Setup ← CURRENT
+- [ ] Initialize project with chosen tech stack
+- [ ] Set up authentication and user profiles
+- [ ] Configure database schema for products, users, orders
+
+### Core Marketplace Features
+- [ ] Build product listing and management
+- [ ] Implement search with filters and categories
+- [ ] Create product detail pages with images
+
+### Buyer & Seller Workflows
+- [ ] Build shopping cart and checkout flow
+- [ ] Implement seller dashboard and analytics
+- [ ] Add order management and tracking
+
+### Advanced Features & Launch
+- [ ] Add payment gateway integration
+- [ ] Implement reviews and ratings
+- [ ] Add monitoring, testing, and production deployment
+
+## Known issues
+- none yet
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for PawPilot > memory-bank-projectbrief-md-pawpilot 1`] = `
+"# Project Brief — PawPilot
+
+## Core requirements
+A comprehensive pet care platform that connects pet owners with veterinarians. Features include appointment scheduling, pet health profiles, medical record management, medication tracking, and direct communication with vets.
+
+## Goals
+- A unified platform that centralizes pet health management with appointment scheduling
+- digital health records
+- medication reminders
+- and direct vet communication
+
+## Scope
+- Pet profile creation with health records
+- Appointment scheduling with calendar view
+- Medication tracking with reminders
+- Vet communication via in-app messaging
+
+## Target users
+- Pet owners
+- Veterinarians
+- Pet care providers
+
+## Tech stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript
+
+## Quality rules
+- Pet health data must be stored securely
+- Appointment scheduling must prevent double-booking
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for PawPilot > memory-bank-systemPatterns-md-pawpilot 1`] = `
+"# System Patterns — PawPilot
+
+## Architecture
+Client-server with REST API, search index, and payment gateway
+
+## Directory structure
+_PawPilot directory structure — to be refined during project review._
+
+## Component tree
+\`\`\`
+App
+├── HomePage
+├── ProductListingPage
+├── ProductDetailPage
+├── SearchResultsPage
+├── SellerDashboardPage
+├── CartPage
+├── CheckoutPage
+├── UserProfilePage
+├── AdminDashboardPage
+├── PetProfileCreationWithHealthRecords
+├── AppointmentSchedulingWithCalendarView
+├── MedicationTrackingWithReminders
+├── VetCommunicationViaInappMessaging
+\`\`\`
+
+## Data flow
+\`\`\`
+Seller lists product → product indexed in search → buyer browses/search → buyer views detail → buyer adds to cart → checkout processes payment → order created → seller notified → tracking updated
+\`\`\`
+
+## Key technical decisions
+- Languages: TypeScript
+- Frameworks: React, Vite, Tailwind CSS
+
+## Constraints
+- Mobile-first responsive design
+- HIPAA/GDPR compliant data handling
+
+## Domain Model
+
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for PawPilot > memory-bank-techContext-md-pawpilot 1`] = `
+"# Tech Context — PawPilot
+
+## Technologies used
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript
+
+## Constraints
+- Mobile-first responsive design
+- HIPAA/GDPR compliant data handling
+
+## Setup
+_PawPilot setup instructions — to be refined during project review._
+
+## Development
+- Code style: TypeScript strict mode, functional components, Tailwind classes
+- Testing: Manual review in MVP; vitest planned
+- Fallback behavior: Empty sections render a helpful hint instead of crashing
+
+## Quality rules
+- Pet health data must be stored securely
+- Appointment scheduling must prevent double-booking
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for RestaurantFlow > memory-bank-activeContext-md-restaurantflow 1`] = `
+"# Active Context — RestaurantFlow
+
+## Current focus
+Phase: MVP — Core Features
+Active task: Reservation system
+
+## Recent changes
+- Project bootstrapped via VibeForge
+
+## Next steps
+- MVP — Core Features ← CURRENT
+  - Reservation system
+
+## Active decisions
+- Stack: TypeScript / React, Node.js, Express, PostgreSQL
+- Architecture: Client-server architecture with WebSocket real-time updates
+- Constraints:
+  - Real-time sync required
+  - Multi-device support (tablet, kiosk, kitchen display)
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for RestaurantFlow > memory-bank-productContext-md-restaurantflow 1`] = `
+"# Product Context — RestaurantFlow
+
+## Why this exists
+Restaurants struggle with coordinating reservations, table assignments, and orders using paper-based or disconnected digital tools.
+
+## How it should work
+A unified digital platform that streamlines reservation management, table assignment, and order tracking with real-time updates.
+
+## Target users
+- Restaurant owners
+- Restaurant managers
+- Waitstaff
+
+## User stories
+- As a host, I want to manage reservations and assign tables visually.
+- As a waiter, I want to send orders to the kitchen digitally.
+
+## MVP scope
+- Reservation calendar with table management
+- Digital order taking and kitchen display
+- Menu management with categories
+- Real-time table status overview
+
+## Quality rules
+- Reservations must not double-book tables
+- Orders must reach kitchen within 2 seconds
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for RestaurantFlow > memory-bank-progress-md-restaurantflow 1`] = `
+"# Progress — RestaurantFlow
+
+## STATUS
+CURRENT_PHASE: MVP — Core Features
+DONE_LAST_SESSION: Database schema ontwerpen
+NEXT: Reservation system
+BLOCKERS: none
+
+## What works
+- Database schema ontwerpen
+
+## What's left
+- Reservation system
+
+## Phase breakdown
+
+### Foundation & Setup
+- [x] Database schema ontwerpen
+
+### MVP — Core Features ← CURRENT
+- [ ] Reservation system
+
+## Known issues
+- none yet
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for RestaurantFlow > memory-bank-projectbrief-md-restaurantflow 1`] = `
+"# Project Brief — RestaurantFlow
+
+## Core requirements
+A comprehensive system for restaurants to manage reservations, table assignments, menu updates, and order tracking in real-time.
+
+## Goals
+- A unified digital platform that streamlines reservation management
+- table assignment
+- and order tracking with real-time updates
+
+## Scope
+- Reservation calendar with table management
+- Digital order taking and kitchen display
+- Menu management with categories
+- Real-time table status overview
+
+## Target users
+- Restaurant owners
+- Restaurant managers
+- Waitstaff
+
+## Tech stack
+- **Frontend:** React
+- **Backend:** Node.js, Express
+- **Database:** PostgreSQL
+- **Other:** TypeScript, SQL
+
+## Quality rules
+- Reservations must not double-book tables
+- Orders must reach kitchen within 2 seconds
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for RestaurantFlow > memory-bank-systemPatterns-md-restaurantflow 1`] = `
+"# System Patterns — RestaurantFlow
+
+## Architecture
+Client-server architecture with WebSocket real-time updates
+
+## Directory structure
+_RestaurantFlow directory structure — to be refined during project review._
+
+## Component tree
+\`\`\`
+App
+├── DashboardPage
+├── ReservationCalendarPage
+├── OrderManagementPage
+├── MenuManagementPage
+├── KitchenDisplayPage
+├── TableManagementPage
+├── CustomerProfilePage
+├── ReportPage
+├── ReservationCalendarWithTableManagement
+├── DigitalOrderTakingAndKitchenDisplay
+├── MenuManagementWithCategories
+├── RealtimeTableStatusOverview
+\`\`\`
+
+## Data flow
+\`\`\`
+Customer makes reservation → host assigns table → waiter takes order → order sent to kitchen display → kitchen prepares and marks complete → waiter serves → payment processed → table freed
+\`\`\`
+
+## Key technical decisions
+- Languages: TypeScript
+- Frameworks: React, Node.js, Express, PostgreSQL
+- Tools: SQL
+- Dependencies: PostgreSQL
+
+## Constraints
+- Real-time sync required
+- Multi-device support (tablet, kiosk, kitchen display)
+
+## Domain Model
+
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for RestaurantFlow > memory-bank-techContext-md-restaurantflow 1`] = `
+"# Tech Context — RestaurantFlow
+
+## Technologies used
+- **Frontend:** React
+- **Backend:** Node.js, Express
+- **Database:** PostgreSQL
+- **Other:** TypeScript, SQL
+
+## Constraints
+- Real-time sync required
+- Multi-device support (tablet, kiosk, kitchen display)
+
+## Setup
+_RestaurantFlow setup instructions — to be refined during project review._
+
+## Development
+- Code style: TypeScript strict mode, functional components
+- Testing: Integration tests for API endpoints
+- Fallback behavior: Empty sections render a helpful hint instead of crashing
+
+## Quality rules
+- Reservations must not double-book tables
+- Orders must reach kitchen within 2 seconds
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for RetroForge > memory-bank-activeContext-md-retroforge 1`] = `
+"# Active Context — RetroForge
+
+## Current focus
+Phase: Foundation & Setup
+Active task: Initialize project with chosen tech stack
+
+## Recent changes
+- Project bootstrapped via VibeForge
+
+## Next steps
+- Foundation & Setup ← CURRENT
+  - Initialize project with chosen tech stack
+  - Set up emulator core integration
+  - Configure ROM loading and file management
+- Core Emulation Features
+  - Build game library with metadata scraping
+  - Implement emulator core with save states
+  - Add controller mapping and input handling
+- User Experience
+  - Build save state management UI
+  - Implement cheat code support
+  - Add display filters and scaling options
+- Advanced Features & Launch
+  - Add multiplayer/netplay support
+  - Implement achievement system
+  - Add monitoring, testing, and production deployment
+
+## Active decisions
+- Stack: TypeScript, C++ / React, Vite, Tailwind CSS
+- Architecture: Desktop application with plugin-based emulator cores and local file storage
+- Constraints:
+  - WebAssembly-based emulation core
+  - IndexedDB for ROM and save state storage
+  - Offline-capable after initial load
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for RetroForge > memory-bank-productContext-md-retroforge 1`] = `
+"# Product Context — RetroForge
+
+## Why this exists
+Retro gaming enthusiasts struggle to find modern, cross-platform emulators that work seamlessly in the browser without complex setup or dedicated hardware.
+
+## How it should work
+A web-based emulator platform that brings classic console gaming to any modern browser with save states, controller support, and a clean library management interface.
+
+## Target users
+- Retro gaming enthusiasts
+- Emulator developers
+- Game preservationists
+
+## User stories
+- As a retro gamer, I want to load ROMs and play classic games in my browser.
+- As a gamer, I want to save and load my progress at any point.
+- As a power user, I want to configure controller mappings for different platforms.
+
+## MVP scope
+- ROM loading and parsing for NES/SNES/Game Boy
+- Emulation core with CPU, GPU, and audio
+- Save state creation and loading
+- Controller configuration UI
+- ROM library with grid view
+
+## Quality rules
+- ROM files must be validated before loading
+- Save states must be portable across sessions
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for RetroForge > memory-bank-progress-md-retroforge 1`] = `
+"# Progress — RetroForge
+
+## STATUS
+CURRENT_PHASE: Foundation & Setup
+DONE_LAST_SESSION: none
+NEXT: Initialize project with chosen tech stack
+BLOCKERS: none
+
+## What works
+- _(nothing completed yet)_
+
+## What's left
+- Initialize project with chosen tech stack
+- Set up emulator core integration
+- Configure ROM loading and file management
+- Build game library with metadata scraping
+- Implement emulator core with save states
+- Add controller mapping and input handling
+- Build save state management UI
+- Implement cheat code support
+- Add display filters and scaling options
+- Add multiplayer/netplay support
+- Implement achievement system
+- Add monitoring, testing, and production deployment
+
+## Phase breakdown
+
+### Foundation & Setup ← CURRENT
+- [ ] Initialize project with chosen tech stack
+- [ ] Set up emulator core integration
+- [ ] Configure ROM loading and file management
+
+### Core Emulation Features
+- [ ] Build game library with metadata scraping
+- [ ] Implement emulator core with save states
+- [ ] Add controller mapping and input handling
+
+### User Experience
+- [ ] Build save state management UI
+- [ ] Implement cheat code support
+- [ ] Add display filters and scaling options
+
+### Advanced Features & Launch
+- [ ] Add multiplayer/netplay support
+- [ ] Implement achievement system
+- [ ] Add monitoring, testing, and production deployment
+
+## Known issues
+- none yet
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for RetroForge > memory-bank-projectbrief-md-retroforge 1`] = `
+"# Project Brief — RetroForge
+
+## Core requirements
+A browser-based retro game emulator that supports NES, SNES, and Game Boy platforms. Features include ROM loading, save state management, controller configuration, and cheat code support. Built with WebAssembly for high-performance emulation.
+
+## Goals
+- A web-based emulator platform that brings classic console gaming to any modern browser with save states
+- controller support
+- and a clean library management interface
+
+## Scope
+- ROM loading and parsing for NES/SNES/Game Boy
+- Emulation core with CPU, GPU, and audio
+- Save state creation and loading
+- Controller configuration UI
+- ROM library with grid view
+
+## Target users
+- Retro gaming enthusiasts
+- Emulator developers
+- Game preservationists
+
+## Tech stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript, C++, WebAssembly, Emscripten, SDL2, OpenGL, IndexedDB
+
+## Quality rules
+- ROM files must be validated before loading
+- Save states must be portable across sessions
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for RetroForge > memory-bank-systemPatterns-md-retroforge 1`] = `
+"# System Patterns — RetroForge
+
+## Architecture
+Desktop application with plugin-based emulator cores and local file storage
+
+## Directory structure
+_RetroForge directory structure — to be refined during project review._
+
+## Component tree
+\`\`\`
+App
+├── HomePage
+├── GameLibraryPage
+├── EmulatorCorePage
+├── RomManagerPage
+├── SaveStatePage
+├── ControllerConfigPage
+├── SettingsPage
+├── ROMLoadingAndParsingForNESSNESGameBoy
+├── EmulationCoreWithCPUGPUAndAudio
+├── SaveStateCreationAndLoading
+├── ControllerConfigurationUI
+├── ROMLibraryWithGridView
+\`\`\`
+
+## Data flow
+\`\`\`
+User launches app → browses game library → selects ROM → emulator core loads → game renders with audio/video → user plays with mapped controls → save state created → progress persisted
+\`\`\`
+
+## Key technical decisions
+- Languages: TypeScript, C++
+- Frameworks: React, Vite, Tailwind CSS
+- Tools: WebAssembly, Emscripten, SDL2, OpenGL, IndexedDB
+- Dependencies: OpenGL, IndexedDB
+
+## Constraints
+- WebAssembly-based emulation core
+- IndexedDB for ROM and save state storage
+- Offline-capable after initial load
+
+## Domain Model
+
+### Entities
+- **ROM**: Game ROM file for emulation
+- **SaveState**: Saved game state snapshot
+- **Game**: Retro game instance
+- **ControllerConfig**: Controller mapping configuration
+- **EmulatorCore**: Emulation core engine
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for RetroForge > memory-bank-techContext-md-retroforge 1`] = `
+"# Tech Context — RetroForge
+
+## Technologies used
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript, C++, WebAssembly, Emscripten, SDL2, OpenGL, IndexedDB
+
+## Constraints
+- WebAssembly-based emulation core
+- IndexedDB for ROM and save state storage
+- Offline-capable after initial load
+
+## Setup
+_RetroForge setup instructions — to be refined during project review._
+
+## Development
+- Code style: TypeScript strict mode, C++ with modern standards
+- Testing: Unit tests for emulation core; integration tests for UI
+- Fallback behavior: Empty sections render a helpful hint instead of crashing
+
+## Quality rules
+- ROM files must be validated before loading
+- Save states must be portable across sessions
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for SolarPro Lokaal > memory-bank-activeContext-md-solarpro-lokaal 1`] = `
+"# Active Context — SolarPro Lokaal
+
+## Current focus
+Phase: Foundation & Setup
+Active task: Project scaffold opzetten
+
+## Recent changes
+- Project bootstrapped via VibeForge
+
+## Next steps
+- Foundation & Setup ← CURRENT
+  - Project scaffold opzetten
+- MVP — Kernfunctionaliteit
+  - Offerte template bouwen
+
+## Active decisions
+- Stack: TypeScript / React, Vite, Tailwind CSS
+- Architecture: Single-page application met client-side routing
+- Constraints:
+  - Lokaal draaiend zonder backend
+  - Offertes moeten offline beschikbaar zijn
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for SolarPro Lokaal > memory-bank-productContext-md-solarpro-lokaal 1`] = `
+"# Product Context — SolarPro Lokaal
+
+## Why this exists
+Lokale zonnepaneleninstallateurs hebben geen professioneel offerteplatform, waardoor ze tijd verliezen met handmatige offertes en een minder professionele uitstraling hebben.
+
+## How it should work
+Een gebruiksvriendelijk webplatform waar installateurs snel offertes kunnen genereren, beheren en versturen, met een professionele template en klantbeheer.
+
+## Target users
+- Zonnepaneleninstallateurs
+- MKB-bedrijven in de zonne-energie
+
+## User stories
+- Als installateur wil ik een offerte kunnen maken op basis van een template, zodat ik tijd bespaar.
+- Als installateur wil ik klantgegevens kunnen opslaan, zodat ik ze niet elke keer opnieuw hoef in te voeren.
+
+## MVP scope
+- Offerte maken met template
+- Klantbeheer met adresgegevens
+- Offerte exporteren als PDF
+- Offerte status bijhouden (concept/verzonden/goedgekeurd)
+
+## Quality rules
+- Offerte template moet valide PDF opleveren
+- Klantgegevens moeten lokaal worden opgeslagen
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for SolarPro Lokaal > memory-bank-progress-md-solarpro-lokaal 1`] = `
+"# Progress — SolarPro Lokaal
+
+## STATUS
+CURRENT_PHASE: Foundation & Setup
+DONE_LAST_SESSION: none
+NEXT: Project scaffold opzetten
+BLOCKERS: none
+
+## What works
+- _(nothing completed yet)_
+
+## What's left
+- Project scaffold opzetten
+- Offerte template bouwen
+
+## Phase breakdown
+
+### Foundation & Setup ← CURRENT
+- [ ] Project scaffold opzetten
+
+### MVP — Kernfunctionaliteit
+- [ ] Offerte template bouwen
+
+## Known issues
+- none yet
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for SolarPro Lokaal > memory-bank-projectbrief-md-solarpro-lokaal 1`] = `
+"# Project Brief — SolarPro Lokaal
+
+## Core requirements
+Een platform waar lokale zonnepaneleninstallateurs offertes kunnen maken, beheren en versturen naar klanten. Het platform biedt een professionele uitstraling met een eenvoudige workflow.
+
+## Goals
+- Een gebruiksvriendelijk webplatform waar installateurs snel offertes kunnen genereren
+- beheren en versturen
+- met een professionele template en klantbeheer
+
+## Scope
+- Offerte maken met template
+- Klantbeheer met adresgegevens
+- Offerte exporteren als PDF
+- Offerte status bijhouden (concept/verzonden/goedgekeurd)
+
+## Target users
+- Zonnepaneleninstallateurs
+- MKB-bedrijven in de zonne-energie
+
+## Tech stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript, HTML, CSS
+
+## Quality rules
+- Offerte template moet valide PDF opleveren
+- Klantgegevens moeten lokaal worden opgeslagen
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for SolarPro Lokaal > memory-bank-systemPatterns-md-solarpro-lokaal 1`] = `
+"# System Patterns — SolarPro Lokaal
+
+## Architecture
+Single-page application met client-side routing
+
+## Directory structure
+_SolarPro Lokaal directory structure — to be refined during project review._
+
+## Component tree
+\`\`\`
+App
+├── DashboardPage
+├── ContactListPage
+├── DealPipelinePage
+├── ActivityTimelinePage
+├── ReportPage
+├── SettingsPage
+├── ImportExportPage
+├── EmailIntegrationPage
+├── OfferteMakenMetTemplate
+├── KlantbeheerMetAdresgegevens
+├── OfferteExporterenAlsPDF
+├── OfferteStatusBijhoudenConceptverzondengoedgekeurd
+\`\`\`
+
+## Data flow
+\`\`\`
+User adds contact → contact appears in pipeline → user moves deal through stages → dashboard updates metrics → reports generated from pipeline data
+\`\`\`
+
+## Key technical decisions
+- Languages: TypeScript
+- Frameworks: React, Vite, Tailwind CSS
+- Tools: HTML, CSS
+
+## Constraints
+- Lokaal draaiend zonder backend
+- Offertes moeten offline beschikbaar zijn
+
+## Domain Model
+
+### Entities
+- **Panel**: Solar panel product
+- **Installation**: Solar panel installation project
+- **Quote**: Customer quote for solar installation
+- **Customer**: Customer requesting a quote
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for SolarPro Lokaal > memory-bank-techContext-md-solarpro-lokaal 1`] = `
+"# Tech Context — SolarPro Lokaal
+
+## Technologies used
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript, HTML, CSS
+
+## Constraints
+- Lokaal draaiend zonder backend
+- Offertes moeten offline beschikbaar zijn
+
+## Setup
+_SolarPro Lokaal setup instructions — to be refined during project review._
+
+## Development
+- Code style: TypeScript strict mode, functional components, Tailwind classes
+- Testing: Manual review in MVP
+- Fallback behavior: Empty sections render a helpful hint instead of crashing
+
+## Quality rules
+- Offerte template moet valide PDF opleveren
+- Klantgegevens moeten lokaal worden opgeslagen
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for TaskForge > memory-bank-activeContext-md-taskforge 1`] = `
+"# Active Context — New Software Project
+
+## Current focus
+Phase: Foundation & Setup
+Active task: Initialize project with chosen tech stack
+
+## Recent changes
+- Project bootstrapped via VibeForge
+
+## Next steps
+- Foundation & Setup ← CURRENT
+  - Initialize project with chosen tech stack
+  - Set up database schema for projects, tasks, and teams
+  - Configure authentication and role-based access
+- Core Project Features
+  - Build project creation and management
+  - Implement task board with drag-and-drop
+  - Add task detail view with comments
+- Team & Collaboration
+  - Build team management and permissions
+  - Implement real-time collaboration
+  - Add notifications and activity feed
+- Advanced Features & Launch
+  - Add timeline and Gantt chart view
+  - Implement reporting and export
+  - Add monitoring, testing, and production deployment
+
+## Active decisions
+- Stack: TypeScript / React, Vite, Tailwind CSS
+- Architecture: Client-server with real-time updates, drag-and-drop boards, and role-based access
+- Constraints:
+  - Local-first with optional cloud sync
+  - OAuth for GitHub and Jira
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for TaskForge > memory-bank-productContext-md-taskforge 1`] = `
+"# Product Context — New Software Project
+
+## Why this exists
+Developers work across multiple projects and tools, making it hard to track what they're working on.
+
+## How it should work
+A unified task tracking dashboard that aggregates tasks from GitHub and Jira into a single view.
+
+## Target users
+- Developers
+- Tech leads
+- Developers
+- Project managers
+
+## User stories
+- As a developer, I want to see all my tasks from GitHub and Jira in one dashboard.
+- As a tech lead, I want to see my team's workload across projects.
+
+## MVP scope
+- GitHub issue integration
+- Jira ticket integration
+- Unified task dashboard
+- Team workload view
+
+## Quality rules
+- Tasks must sync bidirectionally
+- Dashboard must load within 2 seconds
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for TaskForge > memory-bank-progress-md-taskforge 1`] = `
+"# Progress — New Software Project
+
+## STATUS
+CURRENT_PHASE: Foundation & Setup
+DONE_LAST_SESSION: none
+NEXT: Initialize project with chosen tech stack
+BLOCKERS: none
+
+## What works
+- _(nothing completed yet)_
+
+## What's left
+- Initialize project with chosen tech stack
+- Set up database schema for projects, tasks, and teams
+- Configure authentication and role-based access
+- Build project creation and management
+- Implement task board with drag-and-drop
+- Add task detail view with comments
+- Build team management and permissions
+- Implement real-time collaboration
+- Add notifications and activity feed
+- Add timeline and Gantt chart view
+- Implement reporting and export
+- Add monitoring, testing, and production deployment
+
+## Phase breakdown
+
+### Foundation & Setup ← CURRENT
+- [ ] Initialize project with chosen tech stack
+- [ ] Set up database schema for projects, tasks, and teams
+- [ ] Configure authentication and role-based access
+
+### Core Project Features
+- [ ] Build project creation and management
+- [ ] Implement task board with drag-and-drop
+- [ ] Add task detail view with comments
+
+### Team & Collaboration
+- [ ] Build team management and permissions
+- [ ] Implement real-time collaboration
+- [ ] Add notifications and activity feed
+
+### Advanced Features & Launch
+- [ ] Add timeline and Gantt chart view
+- [ ] Implement reporting and export
+- [ ] Add monitoring, testing, and production deployment
+
+## Known issues
+- none yet
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for TaskForge > memory-bank-projectbrief-md-taskforge 1`] = `
+"# Project Brief — New Software Project
+
+## Core requirements
+I want to build a tool that helps developers track their tasks across multiple projects. The tool should integrate with GitHub and Jira and provide a unified dashboard.
+
+## Goals
+- A unified task tracking dashboard that aggregates tasks from GitHub and Jira into a single view
+
+## Scope
+- GitHub issue integration
+- Jira ticket integration
+- Unified task dashboard
+- Team workload view
+
+## Target users
+- Developers
+- Tech leads
+- Developers
+- Project managers
+
+## Tech stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript
+
+## Quality rules
+- Tasks must sync bidirectionally
+- Dashboard must load within 2 seconds
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for TaskForge > memory-bank-systemPatterns-md-taskforge 1`] = `
+"# System Patterns — New Software Project
+
+## Architecture
+Client-server with real-time updates, drag-and-drop boards, and role-based access
+
+## Directory structure
+_New Software Project directory structure — to be refined during project review._
+
+## Component tree
+\`\`\`
+App
+├── DashboardPage
+├── BoardViewPage
+├── TaskDetailPage
+├── TimelinePage
+├── TeamPage
+├── ReportPage
+├── SettingsPage
+├── GitHubIssueIntegration
+├── JiraTicketIntegration
+├── UnifiedTaskDashboard
+├── TeamWorkloadView
+\`\`\`
+
+## Data flow
+\`\`\`
+Project manager creates project → defines tasks and milestones → team members assigned → work tracked on board → progress updated → reports generated → project completed
+\`\`\`
+
+## Key technical decisions
+- Languages: TypeScript
+- Frameworks: React, Vite, Tailwind CSS
+
+## Constraints
+- Local-first with optional cloud sync
+- OAuth for GitHub and Jira
+
+## Domain Model
+
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for TaskForge > memory-bank-techContext-md-taskforge 1`] = `
+"# Tech Context — New Software Project
+
+## Technologies used
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript
+
+## Constraints
+- Local-first with optional cloud sync
+- OAuth for GitHub and Jira
+
+## Setup
+_New Software Project setup instructions — to be refined during project review._
+
+## Development
+- Code style: TypeScript strict mode, functional components, Tailwind classes
+- Testing: Manual review in MVP; vitest planned
+- Fallback behavior: Empty sections render a helpful hint instead of crashing
+
+## Quality rules
+- Tasks must sync bidirectionally
+- Dashboard must load within 2 seconds
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for Travel Planner > memory-bank-activeContext-md-travel-planner 1`] = `
+"# Active Context — Travel Planner
+
+## Current focus
+Phase: Foundation & Setup
+Active task: Project scaffold opzetten
+
+## Recent changes
+- Project bootstrapped via VibeForge
+
+## Next steps
+- Foundation & Setup ← CURRENT
+  - Project scaffold opzetten
+- MVP — Core Features
+  - Itinerary builder
+- Social Features
+  - Trip sharing
+
+## Active decisions
+- Stack: TypeScript / React, Vite, Tailwind CSS
+- Architecture: Single-page application with offline-first architecture
+- Constraints:
+  - Offline access to saved trips
+  - Collaborative editing with conflict resolution
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for Travel Planner > memory-bank-productContext-md-travel-planner 1`] = `
+"# Product Context — Travel Planner
+
+## Why this exists
+Planning a trip involves juggling multiple tabs, spreadsheets, and apps for flights, hotels, activities, and budgets, leading to a fragmented experience.
+
+## How it should work
+A unified trip planning platform with AI-powered destination discovery, collaborative itinerary building, budget tracking, and sharing features.
+
+## Target users
+- Travel enthusiasts
+- Trip planners
+- Group travelers
+
+## User stories
+- As a traveler, I want AI suggestions for destinations based on my preferences.
+- As a group traveler, I want to collaborate on the itinerary with my companions.
+
+## MVP scope
+- Destination discovery with AI suggestions
+- Itinerary builder with drag-and-drop
+- Budget tracker per trip
+- Trip sharing with companions
+
+## Quality rules
+- Itinerary must support date ranges
+- Budget must calculate totals correctly
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for Travel Planner > memory-bank-progress-md-travel-planner 1`] = `
+"# Progress — Travel Planner
+
+## STATUS
+CURRENT_PHASE: Foundation & Setup
+DONE_LAST_SESSION: none
+NEXT: Project scaffold opzetten
+BLOCKERS: none
+
+## What works
+- _(nothing completed yet)_
+
+## What's left
+- Project scaffold opzetten
+- Itinerary builder
+- Trip sharing
+
+## Phase breakdown
+
+### Foundation & Setup ← CURRENT
+- [ ] Project scaffold opzetten
+
+### MVP — Core Features
+- [ ] Itinerary builder
+
+### Social Features
+- [ ] Trip sharing
+
+## Known issues
+- none yet
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for Travel Planner > memory-bank-projectbrief-md-travel-planner 1`] = `
+"# Project Brief — Travel Planner
+
+## Core requirements
+An intelligent travel planning app that helps users discover destinations, build itineraries, track budgets, and share trip plans with travel companions.
+
+## Goals
+- A unified trip planning platform with AI-powered destination discovery
+- collaborative itinerary building
+- budget tracking
+- and sharing features
+
+## Scope
+- Destination discovery with AI suggestions
+- Itinerary builder with drag-and-drop
+- Budget tracker per trip
+- Trip sharing with companions
+
+## Target users
+- Travel enthusiasts
+- Trip planners
+- Group travelers
+
+## Tech stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript
+
+## Quality rules
+- Itinerary must support date ranges
+- Budget must calculate totals correctly
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for Travel Planner > memory-bank-systemPatterns-md-travel-planner 1`] = `
+"# System Patterns — Travel Planner
+
+## Architecture
+Single-page application with offline-first architecture
+
+## Directory structure
+_Travel Planner directory structure — to be refined during project review._
+
+## Component tree
+\`\`\`
+App
+├── HomePage
+├── SearchResultsPage
+├── ListingDetailPage
+├── BookingPage
+├── TripDashboardPage
+├── UserProfilePage
+├── ReviewPage
+├── DestinationDiscoveryWithAISuggestions
+├── ItineraryBuilderWithDraganddrop
+├── BudgetTrackerPerTrip
+├── TripSharingWithCompanions
+\`\`\`
+
+## Data flow
+\`\`\`
+User searches destinations → browses listings → views details → books accommodation → payment processed → trip confirmed → review left after stay
+\`\`\`
+
+## Key technical decisions
+- Languages: TypeScript
+- Frameworks: React, Vite, Tailwind CSS
+
+## Constraints
+- Offline access to saved trips
+- Collaborative editing with conflict resolution
+
+## Domain Model
+
+### Entities
+- **User**: System user
+- **Organization**: Organization or tenant
+"
+`;
+
+exports[`Golden Test Suite — Memory Bank Generator > generates memory bank files for Travel Planner > memory-bank-techContext-md-travel-planner 1`] = `
+"# Tech Context — Travel Planner
+
+## Technologies used
+- **Frontend:** React, Vite, Tailwind CSS
+- **Other:** TypeScript
+
+## Constraints
+- Offline access to saved trips
+- Collaborative editing with conflict resolution
+
+## Setup
+_Travel Planner setup instructions — to be refined during project review._
+
+## Development
+- Code style: TypeScript strict mode, functional components, Tailwind classes
+- Testing: Manual review in MVP; vitest planned
+- Fallback behavior: Empty sections render a helpful hint instead of crashing
+
+## Quality rules
+- Itinerary must support date ranges
+- Budget must calculate totals correctly
+"
+`;
